@@ -1,8 +1,13 @@
+:root {
+  --font-primary: 'Inter', sans-serif;
+  --font-secondary: 'Manrope', sans-serif;
+  --font-display: 'Loos Wide', sans-serif;
+
+  --line-height-base: 1.5;
+  --line-height-tight: 1.2;
+}
+
 body {
   background-color: #000000;
   color: #ffffff;
 }
-
-/* p {
-  color: #ff;
-} */
