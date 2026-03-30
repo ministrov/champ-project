@@ -33,7 +33,7 @@
 }
 
 /* Подключаем Loos Wide */
-@font-face {
+/* @font-face {
   font-family: 'Loos Wide';
   src: url('./fonts/LoosWide-Regular.woff2') format('woff2');
   font-weight: 400;
@@ -48,6 +48,7 @@
   font-style: normal;
   font-display: swap;
 }
+*/
 
 :root {
   --font-primary: 'Inter', sans-serif;
