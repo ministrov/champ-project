@@ -1,0 +1,6 @@
+{
+  "extends": "stylelint-config-htmlacademy",
+  "rules": {
+    "@stylistic/no-missing-end-of-source-newline": null
+  }
+}

@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "stylelint": "^16.26.1",
+    "stylelint-config-htmlacademy": "^4.4.0",
     "vite": "^8.0.1"
   }
 }
