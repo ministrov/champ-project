@@ -10,6 +10,7 @@
     "lint": "eslint src --ext .js,.html --fix"
   },
   "devDependencies": {
+    "@eslint/compat": "^2.0.3",
     "eslint": "^9.39.4",
     "eslint-config-htmlacademy": "^10.0.1",
     "stylelint": "^16.26.1",
