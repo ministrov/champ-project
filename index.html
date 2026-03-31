@@ -51,7 +51,7 @@
 
   <footer class="page__footer footer">
     <div class="footer__sertificate sertificate">
-      <h2 class="sertificate__title">Получи сертификат об успешном завершении курса</h2>
+      <h3 class="sertificate__title">Получи сертификат об успешном завершении курса</h3>
       <p class="sertificate__text">Обучение ведется на основании лицензии государственного образца</p>
       <a href="#" class="sertificate__button button">Начать учиться</a>
 
@@ -59,7 +59,37 @@
         alt="В фокусе сертификат на имя пользователя">
     </div>
 
-    <form class="footer__form" action="#" method="post"></form>
+    <div class="footer__middle">
+      <h2 class="footer__title">Сделайте апгрейд карьеры </h2>
+      <form class="footer__form footer-form" action="#" method="post">
+        <div class="footer-form__field">
+          <label for="user-name">
+            <span class="visually-hidden">Поле ввода Имя</span>
+          </label>
+          <input type="text" id="user-name" name="user-name" placeholder="Имя" required />
+        </div>
+        <div class="footer-form__field">
+          <label for="user-phone">
+            <span class="visually-hidden">Поле ввода телефон</span>
+          </label>
+          <input type="tel" id="user-phone" name="user-phone" placeholder="Телефон" required />
+        </div>
+        <div class="footer-form__field">
+          <label for="user-email">
+            <span class="visually-hidden">Поле ввода Электронная почта</span>
+          </label>
+          <input type="email" id="user-email" name="user-email" placeholder="example@domain.com" required />
+        </div>
+
+        <button class="footer-form__button button button--secondary" type="submit">
+          Оставить заявку
+        </button>
+      </form>
+
+      <p class="footer__confirmation">Нажимая кнопку «Оставить заявку», вы подтверждаете согласие на обработку
+        персональных данных</p>
+    </div>
+
 
     <div class="footer__bottom">
       <div class="footer__bottom-up">
