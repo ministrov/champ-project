@@ -63,6 +63,12 @@
   --font-secondary: 'Manrope', sans-serif;
   --font-display: 'Loos Wide', sans-serif;
 
+  --basic-white: #ffffff;
+  --text-extra-dark: #0d1627;
+  --primary: #1859ff;
+  --secondary: #d9f243;
+  --basic-gray: #d9d9d9;
+
   --line-height-base: 1.5;
   --line-height-tight: 1.2;
 }
