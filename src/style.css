@@ -64,10 +64,16 @@
   --font-display: 'Loos Wide', sans-serif;
 
   --basic-white: #ffffff;
+  --white-70: rgba(255, 255, 255, 0.7);
+  --white-20: rgba(255, 255, 255, 0.2);
+  --basic-light: #eef4f6;
   --text-extra-dark: #0d1627;
+  --text-extra-dark-70: rgba(13, 22, 39, 0.7);
   --primary: #1859ff;
   --secondary: #d9f243;
   --basic-gray: #d9d9d9;
+  --gradient-primary: radial-gradient(circle at center, #002fa8, #001a68);
+  --alpha-primary-6: rgba(0, 39, 178, 0.06);
 
   --line-height-base: 1.5;
   --line-height-tight: 1.2;
