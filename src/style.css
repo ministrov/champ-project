@@ -1,7 +1,7 @@
 /* Подключаем Inter */
 @font-face {
   font-family: 'Inter';
-  src: url('./fonts/Inter-Regular.woff2') format('woff2');
+  src: url('/fonts/inter/Inter-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: 'Inter';
-  src: url('./fonts/Inter-Bold.woff2') format('woff2');
+  src: url('/fonts/inter/Inter-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -18,7 +18,7 @@
 /* Подключаем Manrope */
 @font-face {
   font-family: 'Manrope';
-  src: url('./fonts/Manrope-Regular.woff2') format('woff2');
+  src: url('/fonts/manrope/Manrope-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -26,16 +26,16 @@
 
 @font-face {
   font-family: 'Manrope';
-  src: url('./fonts/Manrope-Bold.woff2') format('woff2');
+  src: url('/fonts/manrope/Manrope-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 /* Подключаем Loos Wide */
-/* @font-face {
+@font-face {
   font-family: 'Loos Wide';
-  src: url('./fonts/LoosWide-Regular.woff2') format('woff2');
+  src: url('/fonts/loos-wide/LoosWide-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -43,17 +43,35 @@
 
 @font-face {
   font-family: 'Loos Wide';
-  src: url('./fonts/LoosWide-Bold.woff2') format('woff2');
+  src: url('/fonts/loos-wide/LoosWide-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
-*/
+
 
 :root {
   --font-primary: 'Inter', sans-serif;
   --font-secondary: 'Manrope', sans-serif;
   --font-display: 'Loos Wide', sans-serif;
+
+  --basic-white: #ffffff;
+  --basic-light: #eef4f6;
+  --text-extra-dark: #0d1627;
+  --primary: #1859ff;
+  --secondary: #d9f243;
+  --basic-gray: #d9d9d9;
+  --text-extra-dark-70: rgba(13, 22, 39, 0.7);
+  /* #0d1627 с 70% opacity */
+  --blue-0027B2-6: rgba(0, 39, 178, 0.06);
+  /* #0027B2 с 6% opacity */
+  --white-70: rgba(255, 255, 255, 0.7);
+  /* Белый с 70% opacity */
+  --white-20: rgba(255, 255, 255, 0.2);
+  /* Белый с 20% opacity */
+
+  /* Градиенты */
+  --gradient-primary: radial-gradient(circle at center, #002fa8, #001a68);
 
   --line-height-base: 1.5;
   --line-height-tight: 1.2;
@@ -67,4 +85,20 @@ body {
 
 p {
   font-family: var(--font-secondary);
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-size: 90px;
+  font-weight: 500;
+  line-height: var(--line-height-tight);
+}
+
+.p1 {
+  font-size: 24px;
+  font-family: var(--font-primary);
+}
+
+.plus-button {
+  color: var(--primary);
 }

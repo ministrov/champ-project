@@ -1,18 +1,30 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" class="page">
 
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Предзагрузка шрифтов -->
+  <link rel="preload" href="/fonts/inter/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/manrope/Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/loos-wide/LoosWide-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="src/style.css">
   <title>champ-project</title>
 </head>
 
-<body>
-  sffsdfsd
+<body class="page__body">
+  <!-- Подключение SVG-спрайта -->
+  <div style="height: 0; width: 0; position: fixed; visibility: hidden;">
+    <object type="image/svg+xml" data="src/img/sprite.svg"></object>
+  </div>
 
-  <p>sfsfsdfsdfsd</p>
+  <header class="page__header header"></header>
+
+  <main class="page__main"></main>
+
+  <footer class="page__footer footer"></footer>
+
   <script type="module" src="/src/main.js"></script>
 </body>
 
