@@ -10,11 +10,26 @@
 </head>
 
 <body>
+  <!-- Подключение SVG-спрайта -->
+  <div style="height: 0; width: 0; position: fixed; visibility: hidden;">
+    <object type="image/svg+xml" data="src/img/sprite.svg"></object>
+  </div>
+
   <h1 class="heading">—Опыт, практика, <span>актуальные знания</span></h1>
 
   <p>sfsfsdfsdfsd</p>
 
   <p class="loos">sfsfsdfsdfsd</p>
+
+  <button>
+    <svg class="plus-button" width="60" height="60">
+      <use href="/sprite/sprite.svg#plus"></use>
+    </svg>
+  </button>
+
+  <svg class="plus-button" width="60" height="60">
+    <use href="/sprite/sprite.svg#plus"></use>
+  </svg>
 
 
   <script type="module" src="/src/main.js"></script>
