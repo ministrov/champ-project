@@ -6,4 +6,9 @@
     <!-- Горизонтальная линия -->
     <line x1="10" y1="30" x2="50" y2="30" stroke="currentColor" stroke-width="2"/>
   </symbol>
+
+  <symbol id="burger" viewBox="0 0 28 18">
+    <path d="M30 1L4 0.999998" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
+    <path d="M30 17L4 17" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
+  </symbol>
 </svg>
