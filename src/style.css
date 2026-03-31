@@ -79,22 +79,21 @@
   --line-height-tight: 1.2;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
+  margin: 0;
   font-family: var(--font-primary);
   background-color: #000000;
   color: #ffffff;
 }
 
-p {
-  font-family: var(--font-secondary);
-}
-
-.loos {
-  font-family: var(--font-display);
-}
-
-.heading {
-  font-family: var(--font-display);
-  font-size: 90px;
-  line-height: var(--line-height-tight);
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
