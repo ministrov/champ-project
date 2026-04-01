@@ -209,6 +209,52 @@ img {
 
 /* Main section */
 
+/* Hero */
+
+.hero {
+  padding: 170px 0;
+}
+
+.hero__title {
+  margin: 0;
+  padding-left: 40px;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 90px;
+  line-height: 79px;
+  color: var(--text-extra-dark);
+}
+
+.hero__title-down {
+  display: block;
+  margin-bottom: 35px;
+  padding-left: 19%;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  margin-left: 9%;
+}
+
+.hero__text {
+  max-width: 430px;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 34px;
+  color: var(--text-extra-dark);
+}
+
+.hero__button {
+  padding: 14px 25px 16px;
+  width: 199px;
+  height: 55px;
+  border-radius: 136px;
+}
+
 /* Footer */
 
 .footer {
