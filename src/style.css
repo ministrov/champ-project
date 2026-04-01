@@ -73,32 +73,49 @@
   /* Градиенты */
   --gradient-primary: radial-gradient(circle at center, #002fa8, #001a68);
 
-  --line-height-base: 1.5;
-  --line-height-tight: 1.2;
+  --container-padding: 40px;
+  --container-width: 1360px;
+
+  --line-height-base: 1.2;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
+  margin: 0;
   font-family: var(--font-primary);
-  background-color: #000000;
-  color: #ffffff;
+  font-size: 16px;
+  line-height: var(--line-height-base);
+  background-color: var(--basic-white);
+  color: var(--basic-white);
 }
 
-p {
-  font-family: var(--font-secondary);
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
-.heading {
-  font-family: var(--font-display);
-  font-size: 90px;
-  font-weight: 500;
-  line-height: var(--line-height-tight);
+.container {
+  box-sizing: content-box;
+  max-width: var(--container-width);
+  padding: 0 var(--container-padding);
+  margin: 0 auto;
 }
 
-.p1 {
-  font-size: 24px;
-  font-family: var(--font-primary);
-}
-
-.plus-button {
-  color: var(--primary);
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
