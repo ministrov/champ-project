@@ -296,84 +296,88 @@
   </main>
 
   <footer class="page__footer footer">
-    <div class="footer__sertificate sertificate">
-      <h3 class="sertificate__title">Получи сертификат об успешном завершении курса</h3>
-      <p class="sertificate__text">Обучение ведется на основании лицензии государственного образца</p>
-      <a href="#" class="sertificate__button button">Начать учиться</a>
+    <div class="container">
+      <div class="footer__sertificate sertificate">
+        <div class="sertificate__text-content">
+          <h3 class="sertificate__title">Получи сертификат об успешном завершении курса</h3>
+          <p class="sertificate__text">Обучение ведется на основании лицензии государственного образца</p>
+          <a href="#" class="sertificate__button button">Начать учиться</a>
+        </div>
 
-      <img class="sertificate__image" src="images/sertificate.png" width="660" height="440"
-        alt="В фокусе сертификат на имя пользователя">
+        <img class="sertificate__image" src="images/sertificate.png" width="660" height="440"
+          alt="В фокусе сертификат на имя пользователя">
+      </div>
+
+      <div class="footer__middle">
+        <h2 class="footer__title">Сделайте апгрейд карьеры </h2>
+        <form class="footer__form footer-form" action="#" method="post">
+          <div class="footer-form__field">
+            <label for="user-name" class="visually-hidden">Поле ввода Имя</label>
+            <input type="text" id="user-name" name="user-name" placeholder="Имя" required>
+          </div>
+          <div class="footer-form__field">
+            <label for="user-phone" class="visually-hidden">Поле ввода телефон</label>
+            <input type="tel" id="user-phone" name="user-phone" placeholder="Телефон" required>
+          </div>
+          <div class="footer-form__field">
+            <label for="user-email" class="visually-hidden">Поле ввода Электронная почта</label>
+            <input type="email" id="user-email" name="user-email" placeholder="example@domain.com" required>
+          </div>
+
+          <button class="footer-form__button button button--secondary" type="submit">
+            Оставить заявку
+          </button>
+        </form>
+
+        <p class="footer__confirmation">Нажимая кнопку «Оставить заявку», вы подтверждаете согласие на обработку
+          персональных данных</p>
+      </div>
     </div>
-
-    <div class="footer__middle">
-      <h2 class="footer__title">Сделайте апгрейд карьеры </h2>
-      <form class="footer__form footer-form" action="#" method="post">
-        <div class="footer-form__field">
-          <label for="user-name" class="visually-hidden">Поле ввода Имя</label>
-          <input type="text" id="user-name" name="user-name" placeholder="Имя" required>
-        </div>
-        <div class="footer-form__field">
-          <label for="user-phone" class="visually-hidden">Поле ввода телефон</label>
-          <input type="tel" id="user-phone" name="user-phone" placeholder="Телефон" required>
-        </div>
-        <div class="footer-form__field">
-          <label for="user-email" class="visually-hidden">Поле ввода Электронная почта</label>
-          <input type="email" id="user-email" name="user-email" placeholder="example@domain.com" required>
-        </div>
-
-        <button class="footer-form__button button button--secondary" type="submit">
-          Оставить заявку
-        </button>
-      </form>
-
-      <p class="footer__confirmation">Нажимая кнопку «Оставить заявку», вы подтверждаете согласие на обработку
-        персональных данных</p>
-    </div>
-
 
     <div class="footer__bottom">
-      <div class="footer__bottom-up">
-        <a class="footer__logo logo logo--second" href="/">
-          <img class="logo__icon" src="/logo-big.svg" width="267" height="58"
-            alt="В фокусе логотип Академии spreent Богдана Гончаренко">
-        </a>
+      <div class="container">
+        <div class="footer__bottom-up">
+          <a class="footer__logo logo logo--second" href="/">
+            <img class="logo__icon" src="/logo-big.svg" width="267" height="58"
+              alt="В фокусе логотип Академии spreent Богдана Гончаренко">
+          </a>
 
-        <ul class="footer__list">
-          <li class="footer__item">
-            <a class="footer__item-link" href="#">Об академии</a>
-          </li>
-          <li class="footer__item">
-            <a class="footer__item-link" href="#">Корпоративное обучение</a>
-          </li>
-          <li class="footer__item">
-            <a class="footer__item-link" href="#">Оплата</a>
-          </li>
-        </ul>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__item-link" href="#">Об академии</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__item-link" href="#">Корпоративное обучение</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__item-link" href="#">Оплата</a>
+            </li>
+          </ul>
 
-        <ul class="footer__list">
-          <li class="footer__item">
-            <a class="footer__item-link" href="#">Личный кабинет</a>
-          </li>
-          <li class="footer__item">
-            <a class="footer__item-link" href="#">Связаться с нами</a>
-          </li>
-          <li class="footer__item">
-            <a class="footer__item-link" href="#">Политика конфиденциальности</a>
-          </li>
-        </ul>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__item-link" href="#">Личный кабинет</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__item-link" href="#">Связаться с нами</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__item-link" href="#">Политика конфиденциальности</a>
+            </li>
+          </ul>
 
-      </div>
+        </div>
 
-      <div class="footer__bottom-down">
-        <p class="footer__copyright">Академия Богдана Гончаренко © 2024</p>
+        <div class="footer__bottom-down">
+          <p class="footer__copyright">Академия Богдана Гончаренко © 2024</p>
 
-        <a class="footer__link" href="#">
-          <img class="footer__by-mish" src="images/logo-mish.png" width="103" height="41"
-            alt="В фокусе логотип правообладателя дизайн студии Mish">
-        </a>
+          <a class="footer__link" href="#">
+            <img class="footer__by-mish" src="images/logo-mish.png" width="103" height="41"
+              alt="В фокусе логотип правообладателя дизайн студии Mish">
+          </a>
+        </div>
       </div>
     </div>
-
   </footer>
 
   <script type="module" src="/src/main.js"></script>
