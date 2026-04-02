@@ -269,6 +269,7 @@ img {
 .hero__image-box {
   position: absolute;
   display: flex;
+  gap: 20px;
 }
 
 .hero__image {
@@ -278,10 +279,11 @@ img {
 .hero__image-box--one {
   top: 5%;
   right: 10%;
+  flex-direction: row-reverse;
 }
 
 .hero__image-box--two {
-  top: 54%;
+  top: 57%;
   left: 6%;
 }
 
@@ -292,6 +294,28 @@ img {
 
 .hero__arrow {
   color: var(--primary);
+}
+
+.hero__arrow-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__arrow-box--two {
+  justify-content: flex-end;
+}
+
+.hero__name {
+  height: 28px;
+  margin: 0;
+  margin-left: 33px;
+  padding: 2px 8px;
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--basic-white);
+  background-color: var(--primary);
 }
 
 /* About */
