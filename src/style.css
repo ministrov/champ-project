@@ -510,6 +510,8 @@ img {
 
 .plan-card__right {
   width: 31%;
+  padding-left: 40px;
+  border-left: 1px solid var(--white-70);
 }
 
 .plan-card__title {
@@ -519,6 +521,33 @@ img {
   font-weight: 500;
   line-height: 35px;
   color: var(--text-extra-dark);
+}
+
+.plan-card__subtitle {
+  margin: 0;
+  font-family: var(--font-secondary);
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--text-extra-dark);
+}
+
+.plan-card__price-new {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 35px;
+  color: var(--text-extra-dark);
+}
+
+.plan-card__price-old {
+  display: inline;
+  font-family: var(--font-secondary);
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 35px;
+  color: rgba(13, 22, 39, 0.4);
+  text-decoration: line-through;
 }
 
 .plan-card__list {
