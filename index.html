@@ -192,24 +192,37 @@
         <header class="price__header">
           <h2 class="price__title">Стоимость обучения</h2>
 
-          <ul class="price__tabs tabs">
-            <li class="tabs__item">
-              <button class="tabs__button" type="button" aria-label="Разовый платеж">Разовый платеж <span
-                  class="tabs__button-sale">-24%</span></button>
-            </li>
-            <li class="tabs__item">
-              <button class="tabs__button" type="button" aria-label="Рассрочка">Рассрочка</button>
-            </li>
-          </ul>
+          <div class="price__tabs-wrapper">
+            <ul class="price__tabs tabs" role="tablist">
+              <li class="tabs__item" role="presentation">
+                <button class="tabs__button tabs__button--active" type="button" role="tab" aria-selected="true"
+                  aria-controls="panel-payment" id="tab-one-time" aria-label="Разовый платеж">
+                  Разовый платеж <span class="tabs__button-sale">-24%</span>
+                </button>
+              </li>
+              <li class="tabs__item" role="presentation">
+                <button class="tabs__button" type="button" role="tab" aria-selected="false"
+                  aria-controls="panel-payment" id="tab-installment" aria-label="Рассрочка">
+                  Рассрочка
+                </button>
+              </li>
+            </ul>
 
-          <ul class="price__tabs tabs">
-            <li class="tabs__item">
-              <button class="tabs__button" type="button" aria-label="Рубли">Рубли</button>
-            </li>
-            <li class="tabs__item">
-              <button class="tabs__button" type="button" aria-label="Тенге">Тенге</button>
-            </li>
-          </ul>
+            <ul class="price__tabs tabs" role="tablist">
+              <li class="tabs__item" role="presentation">
+                <button class="tabs__button tabs__button--active" type="button" role="tab" aria-selected="true"
+                  aria-controls="panel-currency" id="tab-rub" aria-label="Рубли">
+                  Рубли
+                </button>
+              </li>
+              <li class="tabs__item" role="presentation">
+                <button class="tabs__button" type="button" role="tab" aria-selected="false"
+                  aria-controls="panel-currency" id="tab-kzt" aria-label="Тенге">
+                  Тенге
+                </button>
+              </li>
+            </ul>
+          </div>
         </header>
 
 
