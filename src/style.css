@@ -489,20 +489,70 @@ img {
   list-style: none;
 }
 
+.price__bottom {
+  height: 391px;
+}
+
 .plan-card {
+  display: flex;
+  gap: 15px;
   padding: 30px;
   background-color: var(--basic-light);
   border-radius: 32px;
 }
 
+.plan-card__left {
+  display: flex;
+  flex-direction: column;
+  gap: 140px;
+  width: 67%;
+}
+
+.plan-card__right {
+  width: 31%;
+}
+
 .plan-card__title {
   margin: 0;
-  margin-bottom: 20px;
   font-family: var(--font-display);
   font-size: 34px;
   font-weight: 500;
   line-height: 35px;
   color: var(--text-extra-dark);
+}
+
+.plan-card__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 25px);
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.plan-card__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.plan-card__item-text {
+  margin: 0;
+  font-family: var(--font-secondary);
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--text-extra-dark);
+}
+
+.plan-card__item-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: var(--primary);
+  border-radius: 50%;
 }
 
 /* Footer */
