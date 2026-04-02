@@ -130,14 +130,18 @@ img {
   color: var(--basic-white);
   background-color: var(--primary);
   backdrop-filter: blur(40px);
-  border: none;
+  border: 1px solid transparent;
   border-radius: 136px;
   outline: none;
   cursor: pointer;
+  transition: all 0.5s ease-in-out;
 }
 
 .button:hover {
+  color: var(--primary);
+  background-color: var(--basic-white);
   opacity: 0.8;
+  border: 1px solid var(--primary);
 }
 
 .button--secondary {
