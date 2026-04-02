@@ -509,6 +509,8 @@ img {
 }
 
 .plan-card__right {
+  display: flex;
+  flex-direction: column;
   width: 31%;
   padding-left: 40px;
   border-left: 1px solid var(--white-70);
@@ -525,10 +527,23 @@ img {
 
 .plan-card__subtitle {
   margin: 0;
+  margin-bottom: 5px;
   font-family: var(--font-secondary);
   font-size: 18px;
   line-height: 25px;
   color: var(--text-extra-dark);
+}
+
+.plan-card__price {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.plan-card__price-field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .plan-card__price-new {
@@ -537,6 +552,14 @@ img {
   font-weight: 500;
   font-size: 34px;
   line-height: 35px;
+  color: var(--text-extra-dark);
+}
+
+.plan-card__or {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
   color: var(--text-extra-dark);
 }
 
@@ -582,6 +605,13 @@ img {
   height: 24px;
   background-color: var(--primary);
   border-radius: 50%;
+}
+
+.plan-card__button {
+  display: flex;
+  width: fit-content;
+  margin-top: auto;
+  padding: 14px 25px 16px;
 }
 
 /* Footer */
