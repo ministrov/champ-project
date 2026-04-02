@@ -71,7 +71,7 @@
   /* Белый с 20% opacity */
 
   /* Градиенты */
-  --gradient-primary: radial-gradient(circle at center, #002fa8, #001a68);
+  --gradient-primary: linear-gradient(to bottom, #002fa8, #001a68);
 
   --container-padding: 40px;
   --container-width: 1360px;
@@ -268,6 +268,7 @@ img {
 /* About */
 
 .about {
+  position: relative;
   padding: 90px 0;
 }
 
@@ -308,18 +309,51 @@ img {
 
 .about__list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 20px;
+  min-height: 1100px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .about__item {
-  display: flex;
   width: 785px;
+  height: 500px;
+}
+
+.about__item.card-item--first {
+  align-self: flex-end;
+}
+
+.about__item.card-item--second {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.about__item.card-item--third {
+  position: absolute;
+  z-index: -1;
+  top: 80%;
+  left: 71%;
+  transform: translate(-80%, -57%);
+}
+
+.card-item {
+  overflow: hidden;
+  display: flex;
   background-color: var(--secondary);
   border-radius: 32px;
+}
+
+.card-item--first {
+  background-image: var(--gradient-primary);
+}
+
+.card-item--third {
+  background-color: var(--basic-light);
 }
 
 .card-item__tag {
@@ -337,6 +371,20 @@ img {
   backdrop-filter: blur(30px);
   border-radius: 100px;
   background: rgba(0, 39, 178, 0.06);
+}
+
+.card-item--first .card-item__tag {
+  color: var(--basic-white);
+  backdrop-filter: blur(30px);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.card-item--first .card-item__title {
+  color: var(--basic-white);
+}
+
+.card-item--first .card-item__text {
+  color: var(--white-70);
 }
 
 .card-item__box {
@@ -363,6 +411,10 @@ img {
   font-weight: 500;
   line-height: 25px;
   color: rgba(13, 22, 39, 0.7);
+}
+
+.card-item__image {
+  border-radius: 32px;
 }
 
 /* Community */
