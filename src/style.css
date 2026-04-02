@@ -266,24 +266,32 @@ img {
   border-radius: 136px;
 }
 
-.hero__image {
+.hero__image-box {
   position: absolute;
+  display: flex;
+}
+
+.hero__image {
   border-radius: 32px;
 }
 
-.hero__image--one {
+.hero__image-box--one {
   top: 5%;
   right: 10%;
 }
 
-.hero__image--two {
+.hero__image-box--two {
   top: 54%;
   left: 6%;
 }
 
-.hero__image--three {
+.hero__image-box--three {
   bottom: 0;
   right: 30%;
+}
+
+.hero__arrow {
+  color: var(--primary);
 }
 
 /* About */
