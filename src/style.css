@@ -222,6 +222,7 @@ img {
 /* Hero */
 
 .hero {
+  position: relative;
   padding: 170px 0;
 }
 
@@ -263,6 +264,26 @@ img {
   width: 199px;
   height: 55px;
   border-radius: 136px;
+}
+
+.hero__image {
+  position: absolute;
+  border-radius: 32px;
+}
+
+.hero__image--one {
+  top: 5%;
+  right: 10%;
+}
+
+.hero__image--two {
+  top: 54%;
+  left: 6%;
+}
+
+.hero__image--three {
+  bottom: 0;
+  right: 30%;
 }
 
 /* About */
