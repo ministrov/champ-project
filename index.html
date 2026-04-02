@@ -81,12 +81,41 @@
           <p class="hero__text">Главные ценности, вокруг которых строится обучение в spreent</p>
           <a class="hero__button button" href="#">Начать учиться</a>
         </div>
-        <img class="hero__person-one" src="images/hero-1.jpg" width="329" height="200"
-          alt="В фокусе пользователь курсов Артур">
-        <img class="hero__person-two" src="images/hero-2.jpg" width="175" height="256"
-          alt="В фокусе пользователь курсов Сергей">
-        <img class="hero__person-three" src="images/hero-3.jpg" width="329" height="200"
-          alt="В фокусе пользователь курсов Миша">
+        <div class="hero__image-box hero__image-box--one">
+          <img class="hero__image hero__image--one" src="images/hero-1.jpg" width="329" height="200"
+            alt="В фокусе пользователь курсов Артур">
+
+          <div class="hero__arrow-box hero__arrow-box--one">
+            <svg class="hero__arrow" width="26" height="26" role="img" aria-label="Ладонь">
+              <use href="sprite/sprite.svg#hand"></use>
+            </svg>
+
+            <div class="hero__name">Артур</div>
+          </div>
+        </div>
+        <div class="hero__image-box hero__image-box--two">
+          <img class="hero__image hero__image--two" src="images/hero-2.jpg" width="175" height="256"
+            alt="В фокусе пользователь курсов Сергей">
+          <div class="hero__arrow-box hero__arrow-box--two">
+            <svg class="hero__arrow" width="29" height="29" role="img" aria-label="Стрелка вправо">
+              <use href="sprite/sprite.svg#arrow"></use>
+            </svg>
+
+            <div class="hero__name">Сергей</div>
+          </div>
+        </div>
+        <div class="hero__image-box hero__image-box--three">
+          <img class="hero__image hero__image--three" src="images/hero-3.jpg" width="329" height="200"
+            alt="В фокусе пользователь курсов Миша">
+
+          <div class="hero__arrow-box hero__arrow-box--three">
+            <svg class="hero__arrow" width="29" height="29" role="img" aria-label="Стрелка вправо">
+              <use href="sprite/sprite.svg#arrow"></use>
+            </svg>
+
+            <div class="hero__name">Миша</div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -188,115 +217,164 @@
     </section>
 
     <section class="page__price price">
-      <header>
-        <h2 class="price__title">Стоимость обучения</h2>
+      <div class="container">
+        <header class="price__header">
+          <h2 class="price__title">Стоимость обучения</h2>
 
-        <ul class="price__tabs tabs">
-          <li class="tabs__item">
-            <button class="tabs__button" type="button" aria-label="Разовый платеж">Разовый платеж <span
-                class="tabs__button-sale">-24%</span></button>
-          </li>
-          <li class="tabs__item">
-            <button class="tabs__button" type="button" aria-label="Рассрочка">Рассрочка</button>
-          </li>
-        </ul>
+          <div class="price__tabs-wrapper">
+            <ul class="price__tabs tabs" role="tablist">
+              <li class="tabs__item" role="presentation">
+                <button class="tabs__button tabs__button--active" type="button" role="tab" aria-selected="true"
+                  aria-controls="panel-payment" id="tab-one-time" aria-label="Разовый платеж">
+                  Разовый платеж <span class="tabs__button-sale">-24%</span>
+                </button>
+              </li>
+              <li class="tabs__item" role="presentation">
+                <button class="tabs__button" type="button" role="tab" aria-selected="false"
+                  aria-controls="panel-payment" id="tab-installment" aria-label="Рассрочка">
+                  Рассрочка
+                </button>
+              </li>
+            </ul>
 
-        <ul class="price__tabs tabs">
-          <li class="tabs__item">
-            <button class="tabs__button" type="button" aria-label="Рубли">Рубли</button>
-          </li>
-          <li class="tabs__item">
-            <button class="tabs__button" type="button" aria-label="Тенге">Тенге</button>
-          </li>
-        </ul>
-      </header>
+            <ul class="price__tabs tabs" role="tablist">
+              <li class="tabs__item" role="presentation">
+                <button class="tabs__button tabs__button--active" type="button" role="tab" aria-selected="true"
+                  aria-controls="panel-currency" id="tab-rub" aria-label="Рубли">
+                  Рубли
+                </button>
+              </li>
+              <li class="tabs__item" role="presentation">
+                <button class="tabs__button" type="button" role="tab" aria-selected="false"
+                  aria-controls="panel-currency" id="tab-kzt" aria-label="Тенге">
+                  Тенге
+                </button>
+              </li>
+            </ul>
+          </div>
+        </header>
 
+        <footer class="price__bottom plan-card">
+          <div class="plan-card__left">
+            <h3 class="plan-card__title">Базовый план</h3>
 
-      <footer class="price__bottom plan-card">
-        <h3 class="plan-card__title">Базовый план</h3>
+            <ul class="plan-card__list">
+              <li class="plan-card__item">
+                <div class="plan-card__item-icon-box">
+                  <svg class="plan-card__tick" width="10" height="8">
+                    <use href="/sprite/sprite.svg#tick"></use>
+                  </svg>
+                </div>
 
-        <ul class="plan-card__list">
-          <li class="plan-card__item">
-            <svg class="plan-card__tick" width="10" height="8">
-              <use href="/sprite/sprite.svg#tick"></use>
-            </svg>
+                <p class="plan-card__item-text">Доступ к материалам навсегда</p>
+              </li>
+              <li class="plan-card__item">
+                <div class="plan-card__item-icon-box">
+                  <svg class="plan-card__tick" width="10" height="8">
+                    <use href="/sprite/sprite.svg#tick"></use>
+                  </svg>
+                </div>
 
-            <p class="plan-card__item-text">Доступ к материалам навсегда</p>
-          </li>
-          <li class="plan-card__item">
-            <svg class="plan-card__tick" width="10" height="8">
-              <use href="/sprite/sprite.svg#tick"></use>
-            </svg>
+                <p class="plan-card__item-text">Начало сразу или с группой</p>
+              </li>
+              <li class="plan-card__item">
+                <div class="plan-card__item-icon-box">
+                  <svg class="plan-card__tick" width="10" height="8">
+                    <use href="sprite/sprite.svg#tick"></use>
+                  </svg>
+                </div>
 
-            <p class="plan-card__item-text">Начало сразу или с группой</p>
-          </li>
-          <li class="plan-card__item">
-            <svg class="plan-card__tick" width="10" height="8">
-              <use href="/sprite/sprite.svg#tick"></use>
-            </svg>
+                <p class="plan-card__item-text">С обратной связью и д/з</p>
+              </li>
+              <li class="plan-card__item">
+                <div class="plan-card__item-icon-box">
+                  <svg class="plan-card__tick" width="10" height="8">
+                    <use href="sprite/sprite.svg#tick"></use>
+                  </svg>
+                </div>
 
-            <p class="plan-card__item-text">С обратной связью и д/з</p>
-          </li>
-          <li class="plan-card__item">
-            <svg class="plan-card__tick" width="10" height="8">
-              <use href="/sprite/sprite.svg#tick"></use>
-            </svg>
+                <p class="plan-card__item-text">Скидка 24% при полной оплате</p>
+              </li>
+              <li class="plan-card__item">
+                <div class="plan-card__item-icon-box">
+                  <svg class="plan-card__tick" width="10" height="8">
+                    <use href="sprite/sprite.svg#tick"></use>
+                  </svg>
+                </div>
 
-            <p class="plan-card__item-text">Скидка 24% при полной оплате</p>
-          </li>
-          <li class="plan-card__item">
-            <svg class="plan-card__tick" width="10" height="8">
-              <use href="/sprite/sprite.svg#tick"></use>
-            </svg>
+                <p class="plan-card__item-text">Ревью портфолио и резюме</p>
+              </li>
+              <li class="plan-card__item">
+                <div class="plan-card__item-icon-box">
+                  <svg class="plan-card__tick" width="10" height="8">
+                    <use href="sprite/sprite.svg#tick"></use>
+                  </svg>
+                </div>
 
-            <p class="plan-card__item-text">Ревью портфолио и резюме</p>
-          </li>
-          <li class="plan-card__item">
-            <svg class="plan-card__tick" width="10" height="8">
-              <use href="/sprite/sprite.svg#tick"></use>
-            </svg>
+                <p class="plan-card__item-text">Сертификат по окончанию курса</p>
+              </li>
+            </ul>
+          </div>
 
-            <p class="plan-card__item-text">Сертификат по окончанию курса</p>
-          </li>
-        </ul>
+          <div class="plan-card__right">
+            <h4 class="plan-card__subtitle">Стоимость</h4>
 
-        <h4 class="plan-card__subtitle">Стоимость</h4>
+            <div class="plan-card__price" role="group" aria-label="Цены в рублях и тенге">
+              <div class="plan-card__price-field" aria-label="Цена в рублях">
+                <span class="plan-card__price-new">83 890 ₽</span>
+                <del class="plan-card__price-old" aria-label="Старая цена">110 388 ₽</del>
+              </div>
 
-        <span class="plan-card__price-new">83 890 ₽</span>
-        <span class="plan-card__price-old">110 388 ₽</span>
+              <span class="plan-card__or" aria-label="или (or)">или</span>
 
-        <span class="plan-card__or">или</span>
+              <div class="plan-card__price-field" aria-label="Цена в тенге">
+                <span class="plan-card__price-new">419 000 ₸</span>
+                <del class="plan-card__price-old" aria-label="Старая цена">552 000 ₸</del>
+              </div>
+            </div>
 
-        <span class="plan-card__price-new">419 000 ₸</span>
-        <span class="plan-card__price-old">552 000 ₸</span>
-
-        <a class="plan-card__button button" href="#">Купить курс</a>
-      </footer>
+            <a class="plan-card__button button" href="#">Купить курс</a>
+          </div>
+        </footer>
+      </div>
     </section>
 
     <section class="page__work work">
-      <h2 class="work__title">Где работают наши выпускники</h2>
+      <div class="work__wrapper">
+        <div class="container">
+          <div class="work__text">
+            <h2 class="work__title">Где работают наши выпускники</h2>
 
-      <p class="work__text">Начните работать в крупнейших компаниях индустрии</p>
+            <p class="work__text">Начните работать в крупнейших компаниях индустрии</p>
 
-      <a class="work__button button" href="#">Присоединиться</a>
+            <a class="work__button button" href="#">Присоединиться</a>
+          </div>
+        </div>
 
-      <ul class="work__partners">
-        <li class="work__partner">
-          <img src="images/partners-1.png" width="222" height="222" alt="В фокусе название компании партнера">
-        </li>
-        <li class="work__partner">
-          <img src="images/partners-2.png" width="222" height="222" alt="В фокусе название компании партнера">
-        </li>
-        <li class="work__partner">
-          <img src="images/partners-3.png" width="222" height="222" alt="В фокусе название компании партнера">
-        </li>
-        <li class="work__partner">
-          <img src="images/partners-4.png" width="222" height="222" alt="В фокусе название компании партнера">
-        </li>
-        <li class="work__partner">
-          <img src="images/partners-5.png" width="222" height="222" alt="В фокусе название компании партнера">
-        </li>
+        <div class="work__partners-container">
+          <ul class="work__partners-first">
+            <li class="work__partner">
+              <img src="images/partners-1.png" width="222" height="222" alt="В фокусе название компании партнера">
+            </li>
+            <li class="work__partner">
+              <img src="images/partners-2.png" width="222" height="222" alt="В фокусе название компании партнера">
+            </li>
+            <li class="work__partner">
+              <img src="images/partners-3.png" width="222" height="222" alt="В фокусе название компании партнера">
+            </li>
+          </ul>
+          <ul class="work__partners-second">
+            <li class="work__partner">
+              <img src="images/partners-4.png" width="222" height="222" alt="В фокусе название компании партнера">
+            </li>
+            <li class="work__partner">
+              <img src="images/partners-5.png" width="222" height="222" alt="В фокусе название компании партнера">
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <ul class="work__partners-third">
         <li class="work__partner">
           <img src="images/partners-6.png" width="222" height="222" alt="В фокусе название компании партнера">
         </li>
