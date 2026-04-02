@@ -642,7 +642,7 @@ img {
 /* Work */
 
 .work {
-  padding: 80px 0;
+  padding: 80px 0 330px;
 }
 
 .work__wrapper {
@@ -713,6 +713,8 @@ img {
 /* Footer */
 
 .footer {
+  position: relative;
+  padding-top: 250px;
   background-color: var(--text-extra-dark);
 }
 
@@ -797,6 +799,14 @@ img {
   line-height: 18px;
   letter-spacing: 0.01em;
   color: rgba(255, 255, 255, 0.5);
+}
+
+.footer__sertificate {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1360px;
+  transform: translate(-50%, -50%);
 }
 
 .sertificate {
