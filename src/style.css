@@ -690,10 +690,12 @@ img {
 
 .plan-card__price-new {
   display: block;
+  width: fit-content;
   font-family: var(--font-display);
   font-weight: 500;
   font-size: 34px;
   line-height: 35px;
+  white-space: nowrap;
   color: var(--text-extra-dark);
 }
 
@@ -706,11 +708,12 @@ img {
 }
 
 .plan-card__price-old {
-  display: inline;
-  font-family: var(--font-secondary);
+  display: inline-block;
+  font-family: var(--font-display);
   font-weight: 500;
   font-size: 34px;
   line-height: 35px;
+  white-space: nowrap;
   color: rgba(13, 22, 39, 0.4);
   text-decoration: line-through;
 }
@@ -1120,5 +1123,14 @@ img {
 
   .price {
     padding: 138px 0 120px;
+  }
+
+  .plan-card__price-field {
+    gap: 21px;
+  }
+
+  .plan-card__list {
+    grid-template-columns: 412px 328px;
+    gap: 11px;
   }
 }
