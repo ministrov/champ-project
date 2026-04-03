@@ -1162,4 +1162,49 @@ img {
   .work__partner {
     padding: 10px;
   }
+
+  .footer {
+    padding-top: 252px;
+  }
+
+  .sertificate__text {
+    margin-bottom: 42px;
+  }
+
+  .footer-form__button {
+    width: 212px;
+  }
+
+  .footer-form__input {
+    padding: 15px 24px;
+  }
+
+  .footer__bottom {
+    padding-top: 16px;
+    padding-bottom: 62px;
+  }
+
+  .footer__bottom-up {
+    justify-content: initial;
+    gap: 307px;
+    margin-bottom: 103px;
+  }
+
+  .footer__list {
+    margin-top: 23px;
+  }
+
+  .footer__logo .logo__icon {
+    display: inline-block;
+    margin-top: -22px;
+  }
+
+  .footer__copyright {
+    margin-top: 14px;
+  }
+
+  .footer__link {
+    display: inline-block;
+    margin-top: -11px;
+  }
 }
