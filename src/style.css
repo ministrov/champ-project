@@ -1091,4 +1091,34 @@ img {
   .about__button {
     width: 201px;
   }
+
+  .community__avatars-wrapper {
+    margin-bottom: 65px;
+    padding-top: 58px;
+  }
+
+  .avatars__item:not(:first-child) {
+    margin-left: -27px;
+  }
+
+  .community__text-content {
+    justify-content: initial;
+    gap: 323px;
+  }
+
+  .community__stats {
+    margin-top: -14px;
+  }
+
+  .community__stats-item {
+    gap: 14px;
+  }
+
+  .community__stats-item:nth-child(2) .community__stats-text {
+    max-width: 268px;
+  }
+
+  .price {
+    padding: 138px 0 120px;
+  }
 }
