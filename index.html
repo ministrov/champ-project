@@ -45,7 +45,7 @@
         </ul>
       </nav>
 
-      <a href="#" class="header__begin button">Начать</a>
+      <a href="#form" class="header__begin button">Начать</a>
     </div>
 
     <button class="header__burger" type="button" aria-label="Открыть меню">
@@ -79,14 +79,14 @@
       <div class="container">
         <div class="hero__content">
           <p class="hero__text">Главные ценности, вокруг которых строится обучение в spreent</p>
-          <a class="hero__button button" href="#">Начать учиться</a>
+          <a class="hero__button button" href="#form">Начать учиться</a>
         </div>
         <div class="hero__image-box hero__image-box--one">
           <img class="hero__image hero__image--one" src="images/hero-1.jpg" width="329" height="200"
             alt="В фокусе пользователь курсов Артур">
 
           <div class="hero__arrow-box hero__arrow-box--one">
-            <svg class="hero__arrow" width="26" height="26" role="img" aria-label="Ладонь">
+            <svg class="hero__arrow hero__arrow--hand" width="26" height="26" role="img" aria-label="Ладонь">
               <use href="sprite/sprite.svg#hand"></use>
             </svg>
 
@@ -125,7 +125,7 @@
           <h2 class="about__title">Почему выбирают академию spreent</h2>
           <p class="about__slogan">Учеба построена на принципах реальной работы в IT и дизайне</p>
 
-          <a class="about__button button" href="#">Начать учиться</a>
+          <a class="about__button button" href="#form">Начать учиться</a>
         </header>
 
         <ul class="about__list">
@@ -189,9 +189,11 @@
                 alt="В фокусе аватарка пользователя">
             </li>
             <li class="avatars__item avatars__item--plus">
-              <svg class="avatar__plus" width="60" height="60" role="img" aria-label="Добавить">
-                <use href="sprite/sprite.svg#plus"></use>
-              </svg>
+              <a class="avatars__item-link" href="#form">
+                <svg class="avatar__plus" width="60" height="60" role="img" aria-label="Добавить">
+                  <use href="sprite/sprite.svg#plus"></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </div>
@@ -333,7 +335,7 @@
               </div>
             </div>
 
-            <a class="plan-card__button button" href="#">Купить курс</a>
+            <a class="plan-card__button button" href="#form">Купить курс</a>
           </div>
         </footer>
       </div>
@@ -342,12 +344,12 @@
     <section class="page__work work">
       <div class="work__wrapper">
         <div class="container">
-          <div class="work__text">
+          <div class="work__text-box">
             <h2 class="work__title">Где работают наши выпускники</h2>
 
             <p class="work__text">Начните работать в крупнейших компаниях индустрии</p>
 
-            <a class="work__button button" href="#">Присоединиться</a>
+            <a class="work__button button" href="#form">Присоединиться</a>
           </div>
         </div>
 
@@ -397,14 +399,14 @@
         <div class="sertificate__text-content">
           <h3 class="sertificate__title">Получи сертификат об успешном завершении курса</h3>
           <p class="sertificate__text">Обучение ведется на основании лицензии государственного образца</p>
-          <a href="#" class="sertificate__button button">Начать учиться</a>
+          <a class="sertificate__button button" href="#form">Начать учиться</a>
         </div>
 
         <img class="sertificate__image" src="images/sertificate.png" width="660" height="440"
           alt="В фокусе сертификат на имя пользователя">
       </div>
 
-      <div class="footer__middle">
+      <div id="form" class="footer__middle">
         <h2 class="footer__title">Сделайте апгрейд карьеры </h2>
         <form class="footer__form footer-form" action="#" method="post">
           <div class="footer-form__field">
@@ -418,8 +420,8 @@
           </div>
           <div class="footer-form__field">
             <label for="user-email" class="visually-hidden">Поле ввода Электронная почта</label>
-            <input class="footer-form__input" type="email" id="user-email" name="user-email"
-              placeholder="example@domain.com" required>
+            <input class="footer-form__input" type="email" id="user-email" name="user-email" placeholder="Почта"
+              required>
           </div>
 
           <button class="footer-form__button button button--secondary" type="submit">
@@ -428,8 +430,7 @@
         </form>
 
         <p class="footer__confirmation">Нажимая кнопку «Оставить заявку» вы подтверждаете <br>
-          class="footer-form__input" согласие на обработку
-          персональных данных</p>
+          согласие на обработку персональных данных</p>
       </div>
     </div>
 
