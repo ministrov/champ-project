@@ -105,7 +105,7 @@ body {
 img {
   max-width: 100%;
   height: auto;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .container {
@@ -1064,5 +1064,31 @@ img {
 
   .hero__arrow-box--one {
     margin-top: 33px;
+  }
+
+  .about {
+    padding: 131px 0 78px;
+  }
+
+  .about__top {
+    margin-bottom: 0;
+  }
+
+  .about__item.card-item--first {
+    position: absolute;
+    top: 297px;
+  }
+
+  .about__item.card-item--second {
+    top: 706px;
+  }
+
+  .about__item.card-item--third {
+    top: 1180px;
+    left: 78%;
+  }
+
+  .about__button {
+    width: 201px;
   }
 }
