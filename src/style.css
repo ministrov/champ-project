@@ -272,8 +272,8 @@ img {
 }
 
 .hero__button {
+  max-width: 201px;
   padding: 14px 25px 16px;
-  width: 199px;
   height: 55px;
   border-radius: 136px;
 }
@@ -371,8 +371,8 @@ img {
 }
 
 .about__button {
+  max-width: 201px;
   padding: 14px 25px 16px;
-  width: 199px;
   height: 55px;
 }
 
@@ -904,7 +904,6 @@ img {
 }
 
 .footer-form__button {
-  width: 210px;
   height: 55px;
   padding: 14px 25px 16px;
   border-radius: 136px;
@@ -1029,6 +1028,12 @@ img {
   color: rgba(255, 255, 255, 0.5);
 }
 
+@media screen and (max-width: 1786px) {
+  .hero__content {
+    margin-left: 23%;
+  }
+}
+
 @media screen and (max-width: 1441px) {
   .hero__title-up {
     display: inline-block;
@@ -1047,10 +1052,6 @@ img {
   .hero__text {
     max-width: 460px;
     letter-spacing: 0.25px;
-  }
-
-  .hero__button {
-    width: 201px;
   }
 
   .hero__image-box--two {
@@ -1097,10 +1098,6 @@ img {
   .about__item.card-item--third {
     top: 1180px;
     left: 78%;
-  }
-
-  .about__button {
-    width: 201px;
   }
 
   .community__avatars-wrapper {
@@ -1174,10 +1171,6 @@ img {
 
   .sertificate__text {
     margin-bottom: 42px;
-  }
-
-  .footer-form__button {
-    width: 212px;
   }
 
   .footer-form__input {
