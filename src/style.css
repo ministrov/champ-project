@@ -1234,4 +1234,48 @@ img {
     bottom: 0;
     right: 0;
   }
+
+  .about__top {
+    margin-bottom: 40px;
+  }
+
+  .about__slogan {
+    display: none;
+  }
+
+  .about__button {
+    display: none;
+  }
+
+  .about__list {
+    align-items: center;
+  }
+
+  .about__item {
+    width: 100%;
+    max-width: 90%;
+    justify-content: space-between;
+  }
+
+  .about__item.card-item--first {
+    position: static;
+    top: unset;
+    left: unset;
+    transform: unset;
+    align-self: unset;
+  }
+
+  .about__item.card-item--second {
+    position: static;
+    top: unset;
+    left: unset;
+    transform: unset;
+  }
+
+  .about__item.card-item--third {
+    position: static;
+    top: unset;
+    left: unset;
+    transform: unset;
+  }
 }
