@@ -1206,3 +1206,32 @@ img {
     margin-top: -11px;
   }
 }
+
+@media screen and (max-width: 1380px) {
+  .hero {
+    padding: 274px 0;
+  }
+
+  .hero__title {
+    font-size: 76px;
+    line-height: 66px;
+  }
+
+  .hero__title-down {
+    padding-left: 13%;
+  }
+
+  .hero__image-box--one {
+    right: 4vw;
+  }
+
+  .hero__image-box--two {
+    top: 74%;
+    left: 12%;
+  }
+
+  .hero__image-box--three {
+    bottom: 0;
+    right: 0;
+  }
+}
