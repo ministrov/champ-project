@@ -829,6 +829,10 @@ img {
   list-style: none;
 }
 
+.work__partners-fourth {
+  display: none;
+}
+
 .work__partner {
   border: 1px solid var(--text-extra-dark);
 }
@@ -904,6 +908,7 @@ img {
 }
 
 .footer-form__button {
+  min-width: 210px;
   height: 55px;
   padding: 14px 25px 16px;
   border-radius: 136px;
@@ -1207,6 +1212,12 @@ img {
   }
 }
 
+@media screen and (max-width: 1425px) {
+  .plan-card__price-old {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1380px) {
   .hero {
     padding: 274px 0;
@@ -1273,6 +1284,68 @@ img {
   }
 
   .about__item.card-item--third {
+    position: static;
+    top: unset;
+    left: unset;
+    transform: unset;
+  }
+
+  .community__text-content {
+    justify-content: space-between;
+  }
+
+  .price__tabs-wrapper {
+    display: none;
+  }
+
+  .plan-card__left {
+    gap: 40px;
+  }
+
+  .plan-card__list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .work__wrapper {
+    flex-direction: column;
+  }
+
+  .work__partners-first {
+    display: none;
+  }
+
+  .work__partners-second {
+    display: none;
+  }
+
+  .work__partners-third {
+    display: none;
+  }
+
+  .work__partners-fourth {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .footer__sertificate {
+    width: 96%;
+  }
+
+  .footer-form__button {
+    min-width: 226px;
+  }
+}
+
+@media screen and (max-width: 1224px) {
+  .sertificate {
+    flex-direction: column;
+  }
+
+  .footer__sertificate {
     position: static;
     top: unset;
     left: unset;
