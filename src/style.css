@@ -1387,16 +1387,60 @@ img {
   }
 
   .footer__bottom-up {
-    /* justify-content: space-between; */
     gap: 170px;
   }
 }
 
 @media screen and (max-width: 992px) {
+  .header__site-navigation {
+    display: none;
+  }
+
+  .header__burger {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+
+  .header__burger::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -71%;
+    transform: translate(-50%, -50%);
+    width: 1px;
+    height: 69px;
+    background-color: var(--basic-light);
+  }
+
+  .header__actions {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .hero__title {
+    font-size: 56px;
+    line-height: 50px;
+  }
+
+  .hero__title-down {
+    padding-left: 6%;
+  }
+
+  .hero__content {
+    margin-left: 7%;
+  }
+
   .about__item {
     flex-direction: column;
     max-width: 100%;
     width: 100%;
+    height: auto;
   }
 
   .card-item__box {
@@ -1425,5 +1469,31 @@ img {
 
   .sertificate__image {
     width: 100%;
+  }
+
+  .footer-form {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-form__field {
+    width: 100%;
+  }
+
+  .footer-form__input {
+    width: 100%;
+  }
+
+  .footer-form__button {
+    max-width: fit-content;
+  }
+
+  .footer__bottom-up {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer__bottom {
+    padding-top: 62px;
   }
 }
