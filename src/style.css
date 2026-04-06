@@ -1762,4 +1762,38 @@ img {
   .plan-card__subtitle {
     display: none;
   }
+
+  .work {
+    padding: 60px 0;
+  }
+
+  .work__wrapper {
+    gap: 77px;
+  }
+
+  .work__title {
+    max-width: 370px;
+    font-size: 38px;
+    line-height: 37px;
+    letter-spacing: -0.01em;
+  }
+
+  .work__text {
+    max-width: 370px;
+    margin-bottom: 41px;
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .work__partners-fourth {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .work__partner {
+    max-width: 160px;
+    max-height: 160px;
+    padding: 5px;
+    box-sizing: border-box;
+  }
 }
