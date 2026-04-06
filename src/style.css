@@ -1593,16 +1593,33 @@ img {
     top: 39px;
   }
 
+  .hero__arrow-box--one {
+    margin-top: 18px;
+  }
+
   .hero__image-box--two {
     top: 61%;
     gap: 0;
   }
 
-  .hero__image {
-    border-radius: 17px;
+  .hero__arrow-box--two {
+    position: absolute;
+    bottom: -70px;
+    right: -91px;
   }
 
-  .hero__arrow-box--one {
-    margin-top: 18px;
+  .hero__arrow-box--three {
+    position: absolute;
+    bottom: 163px;
+    left: 14px;
+    width: fit-content;
+  }
+
+  .hero__image-box--three {
+    bottom: 61px;
+  }
+
+  .hero__image {
+    border-radius: 17px;
   }
 }
