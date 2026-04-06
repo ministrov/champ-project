@@ -1721,4 +1721,45 @@ img {
   .community__text-content {
     gap: 54px;
   }
+
+  .price {
+    padding: 175px 0 60px;
+  }
+
+  .price__header {
+    margin-bottom: 30px;
+  }
+
+  .price__title {
+    font-size: 38px;
+    line-height: 37px;
+    letter-spacing: -0.01em;
+  }
+
+  .plan-card__title {
+    font-size: 30px;
+    line-height: 31px;
+  }
+
+  .plan-card__left {
+    gap: 30px;
+    width: 100%;
+  }
+
+  .plan-card__right {
+    flex-direction: row;
+    gap: 41px;
+  }
+
+  .plan-card {
+    gap: 70px;
+  }
+
+  .plan-card__list {
+    gap: 15px;
+  }
+
+  .plan-card__subtitle {
+    display: none;
+  }
 }
