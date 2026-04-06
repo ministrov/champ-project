@@ -1764,7 +1764,7 @@ img {
   }
 
   .work {
-    padding: 60px 0;
+    padding: 60px 0 125px;
   }
 
   .work__wrapper {
@@ -1795,5 +1795,25 @@ img {
     max-height: 160px;
     padding: 5px;
     box-sizing: border-box;
+  }
+
+  .sertificate.sertificate--mobile {
+    position: relative;
+    padding: 30px 15px 205px;
+  }
+
+  .sertificate__title {
+    font-size: 38px;
+    line-height: 37px;
+    letter-spacing: -0.01em;
+  }
+
+  .sertificate__image {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    width: 448px;
+    height: 300px;
+    border-radius: 16px;
   }
 }
