@@ -84,8 +84,13 @@
           <a class="hero__button button" href="#form">Начать учиться</a>
         </div>
         <div class="hero__image-box hero__image-box--one">
-          <img class="hero__image hero__image--one" src="images/hero-1.jpg" width="329" height="200"
-            alt="В фокусе пользователь курсов Артур">
+          <picture>
+            <source media="(max-width: 767px)" srcset="images/hero-1-mobile.jpg" type="image/jpeg">
+            <source srcset="images/hero-1.webp" type="image/webp">
+            <source srcset="images/hero-1-@2x.jpg" type="image/jpeg">
+            <img class="hero__image hero__image--one" src="images/hero-1.jpg" width="329" height="200"
+              alt="В фокусе пользователь курсов Артур">
+          </picture>
 
           <div class="hero__arrow-box hero__arrow-box--one">
             <svg class="hero__arrow hero__arrow--hand" width="26" height="26" role="img" aria-label="Ладонь">
@@ -96,8 +101,13 @@
           </div>
         </div>
         <div class="hero__image-box hero__image-box--two">
-          <img class="hero__image hero__image--two" src="images/hero-2.jpg" width="175" height="256"
-            alt="В фокусе пользователь курсов Сергей">
+          <picture>
+            <source media="(max-width: 767px)" srcset="images/hero-2-mobile.jpg" type="image/jpeg">
+            <source srcset="images/hero-2.webp" type="image/webp">
+            <source srcset="images/hero-2-@2x.jpg" type="image/jpg">
+            <img class="hero__image hero__image--two" src="images/hero-2.jpg" width="175" height="256"
+              alt="В фокусе пользователь курсов Сергей">
+          </picture>
           <div class="hero__arrow-box hero__arrow-box--two">
             <svg class="hero__arrow" width="29" height="29" role="img" aria-label="Стрелка вправо">
               <use href="sprite/sprite.svg#arrow"></use>
@@ -107,8 +117,13 @@
           </div>
         </div>
         <div class="hero__image-box hero__image-box--three">
-          <img class="hero__image hero__image--three" src="images/hero-3.jpg" width="329" height="200"
-            alt="В фокусе пользователь курсов Миша">
+          <picture>
+            <source media="(max-width: 767px)" srcset="images/hero-3-mobile.jpg" type="image/jpeg">
+            <source srcset="images/hero-3.webp" type="image/webp">
+            <source srcset="images/hero-3-@2x.jpg" type="image/jpeg">
+            <img class="hero__image hero__image--three" src="images/hero-3.jpg" width="329" height="200"
+              alt="В фокусе пользователь курсов Миша">
+          </picture>
 
           <div class="hero__arrow-box hero__arrow-box--three">
             <svg class="hero__arrow" width="29" height="29" role="img" aria-label="Стрелка вправо">
@@ -139,8 +154,13 @@
                 свой продукт</p>
             </article>
 
-            <img class="card-item__image" src="images/about-2.png" width="403" height="545"
-              alt="В фокусе преподаватель крупным планом">
+            <picture>
+              <source media="(max-width: 767px)" srcset="images/about-2-mobile.png" type="image/png">
+              <!-- <source srcset="images/hero-1.webp" type="image/webp">
+              <source srcset="images/hero-1-@2x.jpg" type="image/jpeg"> -->
+              <img class="card-item__image" src="images/about-2.png" width="403" height="545"
+                alt="В фокусе преподаватель крупным планом">
+            </picture>
           </li>
           <li class="about__item card-item card-item--second">
             <article class="card-item__box">
@@ -150,8 +170,12 @@
                 компаниях индустрии</p>
             </article>
 
-            <img class="card-item__image" src="images/about-1.png" width="441" height="489"
-              alt="В фокусе преподаватель крупным планом">
+            <picture>
+              <source media="(max-width: 767px)" srcset="images/about-1-mobile.png" type="image/png">
+
+              <img class="card-item__image" src="images/about-1.png" width="441" height="489"
+                alt="В фокусе преподаватель крупным планом">
+            </picture>
           </li>
           <li class="about__item card-item card-item--third">
             <article class="card-item__box">
@@ -161,8 +185,12 @@
                 на тенденции рынка</p>
             </article>
 
-            <img class="card-item__image" src="images/about-3.png" width="562" height="549"
-              alt="В фокусе преподаватель крупным планом">
+            <picture>
+              <source media="(max-width: 767px)" srcset="images/about-3-mobile.png" type="image/png">
+
+              <img class="card-item__image" src="images/about-3.png" width="562" height="549"
+                alt="В фокусе преподаватель крупным планом">
+            </picture>
           </li>
         </ul>
       </div>
@@ -275,15 +303,6 @@
               <li class="plan-card__item">
                 <div class="plan-card__item-icon-box">
                   <svg class="plan-card__tick" width="10" height="8">
-                    <use href="/sprite/sprite.svg#tick"></use>
-                  </svg>
-                </div>
-
-                <p class="plan-card__item-text">Начало сразу или с группой</p>
-              </li>
-              <li class="plan-card__item">
-                <div class="plan-card__item-icon-box">
-                  <svg class="plan-card__tick" width="10" height="8">
                     <use href="sprite/sprite.svg#tick"></use>
                   </svg>
                 </div>
@@ -297,7 +316,16 @@
                   </svg>
                 </div>
 
-                <p class="plan-card__item-text">Скидка 24% при полной оплате</p>
+                <p class="plan-card__item-text">Ревью портфолио и резюме</p>
+              </li>
+              <li class="plan-card__item">
+                <div class="plan-card__item-icon-box">
+                  <svg class="plan-card__tick" width="10" height="8">
+                    <use href="/sprite/sprite.svg#tick"></use>
+                  </svg>
+                </div>
+
+                <p class="plan-card__item-text">Начало сразу или с группой</p>
               </li>
               <li class="plan-card__item">
                 <div class="plan-card__item-icon-box">
@@ -306,7 +334,7 @@
                   </svg>
                 </div>
 
-                <p class="plan-card__item-text">Ревью портфолио и резюме</p>
+                <p class="plan-card__item-text">Скидка 24% при полной оплате</p>
               </li>
               <li class="plan-card__item">
                 <div class="plan-card__item-icon-box">
@@ -428,6 +456,7 @@
   <div class="footer__sertificate sertificate sertificate--mobile">
     <div class="sertificate__text-content">
       <h3 class="sertificate__title">Получи сертификат об успешном завершении курса</h3>
+      <h3 class="sertificate__title-mobile">Получите сертификат после успешного завершения курса</h3>
       <p class="sertificate__text">Обучение ведется на основании лицензии государственного образца</p>
       <a class="sertificate__button button" href="#form">Начать учиться</a>
     </div>
@@ -435,6 +464,7 @@
     <img class="sertificate__image" src="images/sertificate.png" width="660" height="440"
       alt="В фокусе сертификат на имя пользователя">
   </div>
+
   <footer class="page__footer footer">
     <div class="container">
       <div class="footer__sertificate sertificate">
