@@ -1833,4 +1833,37 @@ img {
     height: 300px;
     border-radius: 16px;
   }
+
+  .footer {
+    padding-top: 152px;
+  }
+
+  .footer__title {
+    font-size: 38px;
+    line-height: 37px;
+    letter-spacing: -0.01em;
+  }
+
+  .footer-form {
+    gap: 10px;
+  }
+
+  .footer-form__button {
+    display: flex;
+    min-width: 203px;
+    margin-top: 4px;
+  }
+
+  .footer__list-container {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .footer__list {
+    margin-top: 17px;
+  }
+
+  .footer__copyright {
+    margin-top: 4px;
+  }
 }
