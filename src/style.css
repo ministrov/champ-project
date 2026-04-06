@@ -1514,6 +1514,7 @@ img {
   .hero__title {
     font-size: 40px;
     line-height: 36px;
+    letter-spacing: -1%;
   }
 
   .hero__image {
@@ -1523,9 +1524,18 @@ img {
     object-fit: contain;
   }
 
+  .hero__image-box--one {
+    right: 91px;
+    gap: 41px;
+  }
+
+  .hero__image-box--two {
+    left: 15px;
+  }
+
   .hero__image-box--three {
     bottom: 0;
-    right: 0;
+    right: 15px;
     flex-direction: column-reverse;
   }
 
@@ -1538,5 +1548,61 @@ img {
 
   .card-item__box {
     max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 481px) {
+  .header__actions {
+    gap: 45px;
+  }
+
+  .header__burger::before {
+    left: -80%;
+  }
+
+  .header__burger-icon {
+    display: flex;
+    transform: translate(-5px, 0);
+  }
+
+  .hero {
+    padding: 206px 0 100px;
+    min-height: 770px;
+  }
+
+  .hero__content {
+    gap: 27px;
+    margin-left: 10%;
+  }
+
+  .hero__title {
+    padding-left: 27px;
+  }
+
+  .hero__title-down {
+    margin-bottom: 19px;
+  }
+
+  .hero__text {
+    max-width: 320px;
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  .hero__image-box--one {
+    top: 39px;
+  }
+
+  .hero__image-box--two {
+    top: 61%;
+    gap: 0;
+  }
+
+  .hero__image {
+    border-radius: 17px;
+  }
+
+  .hero__arrow-box--one {
+    margin-top: 18px;
   }
 }
