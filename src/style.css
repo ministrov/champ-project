@@ -1516,6 +1516,19 @@ img {
     line-height: 36px;
   }
 
+  .hero__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .hero__image-box--three {
+    bottom: 0;
+    right: 0;
+    flex-direction: column-reverse;
+  }
+
   .about__item {
     flex-direction: column;
     max-width: 100%;
