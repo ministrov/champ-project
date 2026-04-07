@@ -1180,12 +1180,18 @@ img {
   }
 
   .community__avatars-wrapper {
-    margin-bottom: 65px;
-    padding-top: 58px;
+    margin-bottom: 58px;
+    padding-top: 50px;
+    padding-left: 10px;
   }
 
   .avatars__item:not(:first-child) {
-    margin-left: -27px;
+    margin-left: -30px;
+  }
+
+  .avatars__icon {
+    width: 120px;
+    height: 130px;
   }
 
   .community__text-content {
