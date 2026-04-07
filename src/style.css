@@ -486,6 +486,14 @@ img {
   border-radius: 32px;
 }
 
+.card-item__image--first {
+  transform: translate(19px, 79px);
+}
+
+.card-item__image--second {
+  transform: translate(19px, 65px);
+}
+
 /* Community */
 .community__avatars-wrapper {
   margin-bottom: 35px;
