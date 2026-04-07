@@ -859,7 +859,7 @@ img {
 }
 
 .work__partner {
-  border: 1px solid var(--text-extra-dark);
+  border: 1px solid #dee9ed;
 }
 
 .work__button {
@@ -1212,7 +1212,7 @@ img {
   }
 
   .price {
-    padding: 138px 0 120px;
+    padding: 142px 0 120px;
   }
 
   .plan-card__price-field {
@@ -1248,6 +1248,9 @@ img {
 
   .work__partner {
     padding: 10px;
+    max-width: 240px;
+    max-height: 240px;
+    box-sizing: border-box;
   }
 
   .footer {
