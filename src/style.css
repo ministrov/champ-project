@@ -1,4 +1,3 @@
-/* Подключаем Inter */
 @font-face {
   font-family: 'Inter';
   src: url('/fonts/inter/Inter-Regular.woff2') format('woff2');
@@ -15,7 +14,6 @@
   font-display: swap;
 }
 
-/* Подключаем Manrope */
 @font-face {
   font-family: 'Manrope';
   src: url('/fonts/manrope/Manrope-Regular.woff2') format('woff2');
@@ -32,7 +30,6 @@
   font-display: swap;
 }
 
-/* Подключаем Loos Wide */
 @font-face {
   font-family: 'Loos Wide';
   src: url('/fonts/loos-wide/LoosWide-Regular.woff2') format('woff2');
@@ -70,19 +67,14 @@
   --secondary: #d9f243;
   --basic-gray: #d9d9d9;
   --text-extra-dark-70: rgba(13, 22, 39, 0.7);
-  /* #0d1627 с 70% opacity */
   --blue-0027B2-6: rgba(0, 39, 178, 0.06);
-  /* #0027B2 с 6% opacity */
   --white-70: rgba(255, 255, 255, 0.7);
-  /* Белый с 70% opacity */
   --white-20: rgba(255, 255, 255, 0.2);
-  /* Белый с 20% opacity */
 
-  /* Градиенты */
   --gradient-primary: linear-gradient(to bottom, #002fa8, #001a68);
 
-  --container-padding: 40px;
-  --container-width: 1360px;
+  --container-padding: clamp(15px, 4vw, 40px);
+  --container-width: min(1360px, 100vw);
 
   --line-height-base: 1.2;
 }
@@ -114,8 +106,8 @@ img {
 
 .container {
   max-width: var(--container-width);
-  padding: 0 var(--container-padding);
   margin: 0 auto;
+  padding: 0 var(--container-padding);
   box-sizing: content-box;
 }
 
@@ -278,30 +270,32 @@ img {
   border-radius: 136px;
 }
 
-.hero__image-box {
-  position: absolute;
-  display: flex;
-  gap: 20px;
-}
-
 .hero__image {
+  position: relative;
   border-radius: 32px;
 }
 
+.hero__image-box {
+  position: relative;
+  width: fit-content;
+}
+
 .hero__image-box--one {
-  top: 5%;
-  right: 10%;
-  flex-direction: row-reverse;
+  position: absolute;
+  top: 34px;
+  right: 91px;
 }
 
 .hero__image-box--two {
-  top: 57%;
-  left: 6%;
+  position: absolute;
+  bottom: 91px;
+  left: 91px;
 }
 
 .hero__image-box--three {
+  position: absolute;
   bottom: 0;
-  right: 30%;
+  right: 391px;
 }
 
 .hero__arrow {
@@ -309,16 +303,31 @@ img {
 }
 
 .hero__arrow--hand {
-  color: currentColor;
+  color: var(--primary);
 }
 
 .hero__arrow-box {
   display: flex;
   flex-direction: column;
+  width: fit-content;
+}
+
+.hero__arrow-box--one {
+  position: absolute;
+  top: 32px;
+  left: -140px;
 }
 
 .hero__arrow-box--two {
-  justify-content: flex-end;
+  position: absolute;
+  bottom: 12px;
+  right: -110px;
+}
+
+.hero__arrow-box--three {
+  position: absolute;
+  top: 14px;
+  right: -109px;
 }
 
 .hero__name {
@@ -484,6 +493,14 @@ img {
 
 .card-item__image {
   border-radius: 32px;
+}
+
+.card-item__image--first {
+  transform: translate(19px, 79px);
+}
+
+.card-item__image--second {
+  transform: translate(19px, 65px);
 }
 
 /* Community */
@@ -834,7 +851,7 @@ img {
 }
 
 .work__partner {
-  border: 1px solid var(--text-extra-dark);
+  border: 1px solid #dee9ed;
 }
 
 .work__button {
@@ -1048,6 +1065,14 @@ img {
 }
 
 @media screen and (max-width: 1441px) {
+  .header {
+    padding: 21px 40px;
+  }
+
+  .hero__title {
+    padding-left: 36px;
+  }
+
   .hero__title-up {
     display: inline-block;
     margin-left: -17px;
@@ -1067,18 +1092,12 @@ img {
     letter-spacing: 0.25px;
   }
 
-  .hero__image-box--two {
-    top: 55%;
-    left: 95px;
+  .hero__image {
+    border-radius: 24px;
   }
 
   .hero__name {
     margin-left: 27px;
-  }
-
-  .hero__image-box--three {
-    bottom: 58px;
-    right: 161px;
   }
 
   .hero__image-box--one {
@@ -1087,8 +1106,32 @@ img {
     gap: 60px;
   }
 
+  .hero__image-box--two {
+    top: 55%;
+    left: 95px;
+  }
+
+  .hero__image-box--three {
+    bottom: 55px;
+    right: 269px;
+  }
+
   .hero__arrow-box--one {
-    margin-top: 33px;
+    position: absolute;
+    top: 32px;
+    left: -150px;
+  }
+
+  .hero__arrow-box--two {
+    position: absolute;
+    bottom: -21px;
+    right: -116px;
+  }
+
+  .hero__arrow-box--three {
+    position: absolute;
+    top: 19px;
+    right: -104px;
   }
 
   .about {
@@ -1113,13 +1156,34 @@ img {
     left: 78%;
   }
 
+  .card-item--first .card-item__text,
+  .card-item--second .card-item__text {
+    max-width: 270px;
+  }
+
+  .card-item__image--first {
+    transform: translate(31px, 68px);
+  }
+
+  .card-item__image--second {
+    transform: translate(-15px, 3px);
+    width: 470px;
+    height: 500px;
+  }
+
   .community__avatars-wrapper {
-    margin-bottom: 65px;
-    padding-top: 58px;
+    margin-bottom: 58px;
+    padding-top: 50px;
+    padding-left: 10px;
   }
 
   .avatars__item:not(:first-child) {
-    margin-left: -27px;
+    margin-left: -30px;
+  }
+
+  .avatars__icon {
+    width: 120px;
+    height: 130px;
   }
 
   .community__text-content {
@@ -1140,7 +1204,7 @@ img {
   }
 
   .price {
-    padding: 138px 0 120px;
+    padding: 142px 0 120px;
   }
 
   .plan-card__price-field {
@@ -1153,7 +1217,7 @@ img {
   }
 
   .work {
-    padding: 80px 0 307px;
+    padding: 80px 0 328px;
   }
 
   .work__wrapper {
@@ -1176,6 +1240,9 @@ img {
 
   .work__partner {
     padding: 10px;
+    max-width: 240px;
+    max-height: 240px;
+    box-sizing: border-box;
   }
 
   .footer {
@@ -1240,18 +1307,14 @@ img {
     padding-left: 13%;
   }
 
-  .hero__image-box--one {
-    right: 4vw;
-  }
-
-  .hero__image-box--two {
-    top: 74%;
-    left: 12%;
-  }
-
   .hero__image-box--three {
-    bottom: 0;
-    right: 0;
+    right: 10%;
+  }
+
+  .hero__arrow-box--three {
+    position: absolute;
+    top: -77px;
+    right: 24%;
   }
 
   .about__top {
@@ -1371,6 +1434,10 @@ img {
     max-width: 201px;
   }
 
+  .footer {
+    padding-top: 100px;
+  }
+
   .footer__sertificate.sertificate {
     position: static;
     top: unset;
@@ -1438,6 +1505,14 @@ img {
 
   .hero__content {
     margin-left: 7%;
+  }
+
+  .hero__image-box--two {
+    top: 73%;
+  }
+
+  .hero__image-box--three {
+    bottom: -7%;
   }
 
   .about__item {
@@ -1582,6 +1657,8 @@ img {
 
   .community__avatars-wrapper {
     margin-bottom: 46px;
+    padding-top: 59px;
+    padding-left: 0;
   }
 
   .community__more {
@@ -1639,7 +1716,8 @@ img {
   }
 
   .hero__arrow-box--one {
-    margin-top: 18px;
+    top: 18px;
+    left: -131px;
   }
 
   .hero__image-box--two {
@@ -1648,8 +1726,7 @@ img {
   }
 
   .hero__arrow-box--two {
-    position: absolute;
-    bottom: -70px;
+    bottom: -31px;
     right: -91px;
   }
 
@@ -1694,6 +1771,11 @@ img {
 
   .card-item__text {
     max-width: 350px;
+  }
+
+  .card-item--first .card-item__text,
+  .card-item--second .card-item__text {
+    max-width: 360px;
   }
 
   .card-item--first .card-item__image {
