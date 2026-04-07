@@ -1779,6 +1779,11 @@ img {
     max-width: 350px;
   }
 
+  .card-item--first .card-item__text,
+  .card-item--second .card-item__text {
+    max-width: 360px;
+  }
+
   .card-item--first .card-item__image {
     width: 356px;
     height: 481px;
