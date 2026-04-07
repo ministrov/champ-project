@@ -1315,18 +1315,14 @@ img {
     padding-left: 13%;
   }
 
-  .hero__image-box--one {
-    right: 4vw;
-  }
-
-  .hero__image-box--two {
-    top: 74%;
-    left: 12%;
-  }
-
   .hero__image-box--three {
-    bottom: 0;
-    right: 0;
+    right: 10%;
+  }
+
+  .hero__arrow-box--three {
+    position: absolute;
+    top: -77px;
+    right: 24%;
   }
 
   .about__top {
@@ -1446,6 +1442,10 @@ img {
     max-width: 201px;
   }
 
+  .footer {
+    padding-top: 100px;
+  }
+
   .footer__sertificate.sertificate {
     position: static;
     top: unset;
@@ -1513,6 +1513,14 @@ img {
 
   .hero__content {
     margin-left: 7%;
+  }
+
+  .hero__image-box--two {
+    top: 73%;
+  }
+
+  .hero__image-box--three {
+    bottom: -7%;
   }
 
   .about__item {
