@@ -1164,6 +1164,21 @@ img {
     left: 78%;
   }
 
+  .card-item--first .card-item__text,
+  .card-item--second .card-item__text {
+    max-width: 270px;
+  }
+
+  .card-item__image--first {
+    transform: translate(31px, 68px);
+  }
+
+  .card-item__image--second {
+    transform: translate(-15px, 3px);
+    width: 470px;
+    height: 500px;
+  }
+
   .community__avatars-wrapper {
     margin-bottom: 65px;
     padding-top: 58px;
