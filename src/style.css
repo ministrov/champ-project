@@ -278,30 +278,9 @@ img {
   border-radius: 136px;
 }
 
-.hero__image-box {
-  position: absolute;
-  display: flex;
-  gap: 20px;
-}
-
 .hero__image {
+  position: relative;
   border-radius: 32px;
-}
-
-.hero__image-box--one {
-  top: 5%;
-  right: 10%;
-  flex-direction: row-reverse;
-}
-
-.hero__image-box--two {
-  top: 57%;
-  left: 6%;
-}
-
-.hero__image-box--three {
-  bottom: 0;
-  right: 30%;
 }
 
 .hero__arrow {
@@ -309,16 +288,31 @@ img {
 }
 
 .hero__arrow--hand {
-  color: currentColor;
+  color: var(--primary);
 }
 
 .hero__arrow-box {
   display: flex;
   flex-direction: column;
+  width: fit-content;
+}
+
+.hero__arrow-box--one {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .hero__arrow-box--two {
-  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.hero__arrow-box--three {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .hero__name {
