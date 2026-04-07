@@ -1073,6 +1073,14 @@ img {
 }
 
 @media screen and (max-width: 1441px) {
+  .header {
+    padding: 21px 40px;
+  }
+
+  .hero__title {
+    padding-left: 36px;
+  }
+
   .hero__title-up {
     display: inline-block;
     margin-left: -17px;
@@ -1092,18 +1100,12 @@ img {
     letter-spacing: 0.25px;
   }
 
-  .hero__image-box--two {
-    top: 55%;
-    left: 95px;
+  .hero__image {
+    border-radius: 24px;
   }
 
   .hero__name {
     margin-left: 27px;
-  }
-
-  .hero__image-box--three {
-    bottom: 58px;
-    right: 161px;
   }
 
   .hero__image-box--one {
@@ -1112,8 +1114,32 @@ img {
     gap: 60px;
   }
 
+  .hero__image-box--two {
+    top: 55%;
+    left: 95px;
+  }
+
+  .hero__image-box--three {
+    bottom: 55px;
+    right: 269px;
+  }
+
   .hero__arrow-box--one {
-    margin-top: 33px;
+    position: absolute;
+    top: 32px;
+    left: -150px;
+  }
+
+  .hero__arrow-box--two {
+    position: absolute;
+    bottom: -21px;
+    right: -116px;
+  }
+
+  .hero__arrow-box--three {
+    position: absolute;
+    top: 19px;
+    right: -104px;
   }
 
   .about {
