@@ -1,4 +1,3 @@
-/* Подключаем Inter */
 @font-face {
   font-family: 'Inter';
   src: url('/fonts/inter/Inter-Regular.woff2') format('woff2');
@@ -15,7 +14,6 @@
   font-display: swap;
 }
 
-/* Подключаем Manrope */
 @font-face {
   font-family: 'Manrope';
   src: url('/fonts/manrope/Manrope-Regular.woff2') format('woff2');
@@ -32,7 +30,6 @@
   font-display: swap;
 }
 
-/* Подключаем Loos Wide */
 @font-face {
   font-family: 'Loos Wide';
   src: url('/fonts/loos-wide/LoosWide-Regular.woff2') format('woff2');
@@ -70,19 +67,14 @@
   --secondary: #d9f243;
   --basic-gray: #d9d9d9;
   --text-extra-dark-70: rgba(13, 22, 39, 0.7);
-  /* #0d1627 с 70% opacity */
   --blue-0027B2-6: rgba(0, 39, 178, 0.06);
-  /* #0027B2 с 6% opacity */
   --white-70: rgba(255, 255, 255, 0.7);
-  /* Белый с 70% opacity */
   --white-20: rgba(255, 255, 255, 0.2);
-  /* Белый с 20% opacity */
 
-  /* Градиенты */
   --gradient-primary: linear-gradient(to bottom, #002fa8, #001a68);
 
-  --container-padding: 40px;
-  --container-width: 1360px;
+  --container-padding: clamp(15px, 4vw, 40px);
+  --container-width: min(1360px, 100vw);
 
   --line-height-base: 1.2;
 }
@@ -114,8 +106,8 @@ img {
 
 .container {
   max-width: var(--container-width);
-  padding: 0 var(--container-padding);
   margin: 0 auto;
+  padding: 0 var(--container-padding);
   box-sizing: content-box;
 }
 
