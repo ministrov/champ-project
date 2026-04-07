@@ -1665,6 +1665,8 @@ img {
 
   .community__avatars-wrapper {
     margin-bottom: 46px;
+    padding-top: 59px;
+    padding-left: 0;
   }
 
   .community__more {
