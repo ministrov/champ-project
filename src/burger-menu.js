@@ -3,19 +3,19 @@ export function initMenu() {
   const menu = document.querySelector('.mobile-menu');
 
   const overlay = document.createElement('div');
-  overlay.classList.add('overlay');
+  overlay.classList.add('page__overlay');
   document.body.appendChild(overlay);
 
   function openMenu() {
     menu.classList.add('mobile-menu--open');
-    overlay.classList.add('overlay--open');
+    overlay.classList.add('page__overlay--open');
     burger.setAttribute('aria-label', 'Закрыть меню');
     document.body.style.overflow = 'hidden'; // Блокируем скролл
   }
 
   function closeMenu() {
     menu.classList.remove('mobile-menu--open');
-    overlay.classList.remove('overlay--open');
+    overlay.classList.remove('page__overlay--open');
     burger.setAttribute('aria-label', 'Открыть меню');
     document.body.style.overflow = '';
   }

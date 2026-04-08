@@ -223,7 +223,7 @@ img {
   top: 13%;
   left: 0;
   width: 100%;
-  height: 45%;
+  height: 46%;
   padding: 30px 15px 15px;
   background-color: var(--basic-white);
   pointer-events: none;
@@ -237,9 +237,9 @@ img {
   list-style: none;
 }
 
-.overlay {
+.page__overlay {
   position: fixed;
-  top: 0;
+  top: 100px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -1524,7 +1524,7 @@ img {
   }
 
   .header__mobile-menu {
-    max-height: 250px;
+    top: 15%;
   }
 
   .header__mobile-menu.mobile-menu--open {
@@ -1547,7 +1547,7 @@ img {
     color: var(--text-extra-dark);
   }
 
-  .overlay.overlay--open {
+  .page__overlay.page__overlay--open {
     opacity: 1;
     visibility: visible;
   }
