@@ -1,5 +1,7 @@
-// console.log('Hello World');
+import { initMenu } from './burger-menu';
+import { initFormValidation } from './form';
 
-// const var = 1;
-
-// console.log( typeof var);
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu();
+  initFormValidation();
+});
