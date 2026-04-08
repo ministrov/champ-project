@@ -9,6 +9,11 @@
     <path d="M30 17L4 17" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
   </symbol>
 
+  <symbol id="close" viewBox="0 0 28 28">
+    <path d="M5 19.7988L23.3848 1.41405" stroke="#0D1627" stroke-width="2" stroke-linecap="square"/>
+    <path d="M5 1.79883L23.3848 20.1836" stroke="#0D1627" stroke-width="2" stroke-linecap="square"/>
+  </symbol>
+
   <symbol id="tick" viewBox="0 0 10 8">
     <path d="M3.75 7.94325L0 4.19325L1.19325 3L3.75 5.55675L9.3075 0L10.5037 1.18875L3.75 7.94325Z" fill="currentColor"/>
   </symbol>

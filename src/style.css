@@ -218,7 +218,23 @@ img {
 }
 
 .header__mobile-menu {
-  display: none;
+  position: fixed;
+  z-index: 3;
+  top: 13%;
+  left: 0;
+  width: 100%;
+  height: 45%;
+  padding: 30px 15px 15px;
+  background-color: var(--basic-white);
+  pointer-events: none;
+  transform: translateX(-100%);
+  transition: all 0.5s ease-in-out;
+}
+
+.mobile-menu__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 /* Main section */
