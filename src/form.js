@@ -1,9 +1,13 @@
 /* eslint-disable no-console */
 export function initFormValidation() {
   const form = document.querySelector('.footer__form');
-  const nameField = form.querySelector('.footer-form__field + label[for="user-name"]');
-  const phoneField = form.querySelector('.footer-form__field + label[for="user-phone"]');
-  const emailField = form.querySelector('.footer-form__field + label[for="user-email"]');
+   const nameField = form.querySelector('.footer-form__field input[name="user-name"]');
+  const phoneField = form.querySelector('.footer-form__field input[name="user-phone"]');
+  const emailField = form.querySelector('.footer-form__field input[name="user-email"]');
+
+  console.log(nameField);
+  console.log(phoneField);
+  console.log(emailField);
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -25,7 +29,7 @@ export function initFormValidation() {
       const errorEl = document.createElement('div');
       errorEl.classList.add('footer-form__error-message');
       errorEl.textContent = 'Заполните поле "Имя"';
-      nameField.append(errorEl);
+      nameField.parentElement.append(errorEl);
     }
 
      if (phone === '') {
@@ -33,7 +37,7 @@ export function initFormValidation() {
       const errorEl = document.createElement('div');
       errorEl.classList.add('footer-form__error-message');
       errorEl.textContent = 'Заполните поле "Телефон"\n';
-      phoneField.append(errorEl);
+      phoneField.parentElement.append(errorEl);
     }
 
     if (email === '') {
@@ -41,7 +45,7 @@ export function initFormValidation() {
       const errorEl = document.createElement('div');
       errorEl.classList.add('footer-form__error-message');
       errorEl.textContent = 'Заполните поле "Почта"\n';
-      emailField.append(errorEl);
+      emailField.parentElement.append(errorEl);
     }
 
     if (email !== '' && (!email.includes('@') || !email.includes('.'))) {
@@ -49,7 +53,7 @@ export function initFormValidation() {
       const errorEl = document.createElement('div');
       errorEl.classList.add('footer-form__error-message');
       errorEl.textContent = 'Введите корректный email (должен содержать @ и точку)\n';
-      emailField.append(errorEl);
+      emailField.parentElement.append(errorEl);
     }
 
     // Если есть ошибки - отменяем отправку

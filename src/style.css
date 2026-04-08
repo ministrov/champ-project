@@ -70,6 +70,7 @@
   --blue-0027B2-6: rgba(0, 39, 178, 0.06);
   --white-70: rgba(255, 255, 255, 0.7);
   --white-20: rgba(255, 255, 255, 0.2);
+  --error: #a81a1a;
 
   --gradient-primary: linear-gradient(to bottom, #002fa8, #001a68);
 
@@ -976,6 +977,14 @@ img {
   line-height: 18px;
   letter-spacing: 0.01em;
   color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-form__error-message {
+  padding: 8px;
+  font-family: var(--font-primary);
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--error);
 }
 
 .footer__sertificate {
