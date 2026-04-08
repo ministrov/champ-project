@@ -1,9 +1,9 @@
 /* eslint-disable no-console */
 export function initFormValidation() {
   const form = document.querySelector('.footer__form');
-  const nameField = form.querySelector('.footer-form__field > input[name="user-name"]');
-  const phoneField = form.querySelector('.footer-form__field > input[name="user-phone"]');
-  const emailField = form.querySelector('.footer-form__field > input[name="user-email"]');
+  const nameField = form.querySelector('.footer-form__field + label[for="user-name"]');
+  const phoneField = form.querySelector('.footer-form__field + label[for="user-phone"]');
+  const emailField = form.querySelector('.footer-form__field + label[for="user-email"]');
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -65,13 +65,13 @@ export function initFormValidation() {
 
       fetch('http://echo.htmlacademy.ru/', {
         method: 'POST',
-        mode: 'no-cors',
+        // mode: 'no-cors',
         body: formData
       })
       .then(() => {
+        form.reset();
          // В режиме no-cors response недоступен
         console.log('Fetch запрос выполнен (no-cors mode)');
-        form.reset(); // Теперь это выполнится
         console.log('Форма сброшена');
       })
       .catch(error => {
