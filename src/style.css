@@ -930,14 +930,15 @@ img {
 
 .footer-form__input {
   width: 100%;
-  padding: 15px 20px;
-  border-radius: 136px;
+  max-height: 55px;
+  padding: 14px 24px;
   font-size: 18px;
   line-height: 25px;
   color: var(--basic-white);
   background-color: transparent;
   outline: none;
-  border: none;
+  border: 1px solid transparent;
+  border-radius: 136px;
 }
 
 .footer-form__input:focus {
@@ -952,6 +953,14 @@ img {
 .footer-form__field:focus-within {
   border-color: var(--primary);
   animation: border-pulse 2s ease-in-out infinite;
+}
+
+.footer-form__input.footer-form__input--error {
+  border-color: var(--error);
+}
+
+.footer-form__input.footer-form__input--error::placeholder {
+  color: var(--error);
 }
 
 .footer-form__button {

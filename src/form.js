@@ -5,10 +5,6 @@ export function initFormValidation() {
   const phoneField = form.querySelector('.footer-form__field input[name="user-phone"]');
   const emailField = form.querySelector('.footer-form__field input[name="user-email"]');
 
-  console.log(nameField);
-  console.log(phoneField);
-  console.log(emailField);
-
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -26,6 +22,7 @@ export function initFormValidation() {
 
     if (name === '') {
       hasError = true;
+      nameField.classList.add('footer-form__input--error');
       const errorEl = document.createElement('div');
       errorEl.classList.add('footer-form__error-message');
       errorEl.textContent = 'Заполните поле "Имя"';
@@ -34,6 +31,7 @@ export function initFormValidation() {
 
      if (phone === '') {
       hasError = true;
+      phoneField.classList.add('footer-form__input--error');
       const errorEl = document.createElement('div');
       errorEl.classList.add('footer-form__error-message');
       errorEl.textContent = 'Заполните поле "Телефон"\n';
@@ -42,6 +40,7 @@ export function initFormValidation() {
 
     if (email === '') {
       hasError = true;
+      emailField.classList.add('footer-form__input--error');
       const errorEl = document.createElement('div');
       errorEl.classList.add('footer-form__error-message');
       errorEl.textContent = 'Заполните поле "Почта"\n';
@@ -50,6 +49,7 @@ export function initFormValidation() {
 
     if (email !== '' && (!email.includes('@') || !email.includes('.'))) {
       hasError = true;
+      emailField.classList.add('footer-form__input--error');
       const errorEl = document.createElement('div');
       errorEl.classList.add('footer-form__error-message');
       errorEl.textContent = 'Введите корректный email (должен содержать @ и точку)\n';
@@ -69,12 +69,13 @@ export function initFormValidation() {
 
       fetch('http://echo.htmlacademy.ru/', {
         method: 'POST',
-        // mode: 'no-cors',
         body: formData
       })
       .then(() => {
         form.reset();
-         // В режиме no-cors response недоступен
+        nameField.classList.remove('footer-form__input--error');
+        emailField.classList.remove('footer-form__input--error');
+        phoneField.classList.remove('footer-form__input--error');
         console.log('Fetch запрос выполнен (no-cors mode)');
         console.log('Форма сброшена');
       })
