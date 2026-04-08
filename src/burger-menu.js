@@ -6,8 +6,6 @@ export function initMenu() {
   overlay.classList.add('overlay');
   document.body.appendChild(overlay);
 
-  // console.log(overlay);
-
   function openMenu() {
     menu.classList.add('mobile-menu--open');
     overlay.classList.add('overlay--open');
@@ -18,7 +16,7 @@ export function initMenu() {
   function closeMenu() {
     menu.classList.remove('mobile-menu--open');
     overlay.classList.remove('overlay--open');
-     burger.setAttribute('aria-label', 'Открыть меню');
+    burger.setAttribute('aria-label', 'Открыть меню');
     document.body.style.overflow = '';
   }
 
@@ -35,12 +33,10 @@ export function initMenu() {
 
   // Закрытие по нажатию Escape
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && menu.classList.contains('active')) {
+    if (e.key === 'Escape' && menu.classList.contains('mobile-menu--open')) {
       closeMenu();
     }
   });
-
-  // console.log(burger);
 
 
   // Опционально: изменение иконки в спрайте
@@ -48,7 +44,6 @@ export function initMenu() {
   function updateIcon() {
     const useElement = burger.querySelector('use');
 
-    // console.log(useElement);
     if (!useElement) return;
 
     if (burger.classList.contains('mobile-menu--open')) {
