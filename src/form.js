@@ -69,8 +69,10 @@ export function initFormValidation() {
         body: formData
       })
       .then(() => {
-        form.reset();
-        console.log('Форма отправлена успешно (no-cors mode)');
+         // В режиме no-cors response недоступен
+        console.log('Fetch запрос выполнен (no-cors mode)');
+        form.reset(); // Теперь это выполнится
+        console.log('Форма сброшена');
       })
       .catch(error => {
         console.error('Ошибка отправки:', error);
