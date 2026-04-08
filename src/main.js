@@ -1,5 +1,6 @@
-// console.log('Hello World');
+import { initMenu } from './burger-menu';
 
-// const var = 1;
-
-// console.log( typeof var);
+document.addEventListener('DOMContentLoaded', () => {
+  // console.log('DOMContentLoaded');
+  initMenu();
+});

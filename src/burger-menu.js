@@ -6,6 +6,8 @@ export function initMenu() {
   overlay.classList.add('overlay');
   document.body.appendChild(overlay);
 
+  // console.log(overlay);
+
   function openMenu() {
     menu.classList.add('mobile-menu--open');
     overlay.classList.add('overlay--open');
@@ -38,11 +40,15 @@ export function initMenu() {
     }
   });
 
+  // console.log(burger);
+
 
   // Опционально: изменение иконки в спрайте
   // Если у вас в спрайте есть отдельные иконки для бургера и крестика
   function updateIcon() {
     const useElement = burger.querySelector('use');
+
+    // console.log(useElement);
     if (!useElement) return;
 
     if (burger.classList.contains('mobile-menu--open')) {
