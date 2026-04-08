@@ -70,6 +70,7 @@
   --blue-0027B2-6: rgba(0, 39, 178, 0.06);
   --white-70: rgba(255, 255, 255, 0.7);
   --white-20: rgba(255, 255, 255, 0.2);
+  --error: #a81a1a;
 
   --gradient-primary: linear-gradient(to bottom, #002fa8, #001a68);
 
@@ -929,14 +930,15 @@ img {
 
 .footer-form__input {
   width: 100%;
-  padding: 15px 20px;
-  border-radius: 136px;
+  max-height: 55px;
+  padding: 14px 24px;
   font-size: 18px;
   line-height: 25px;
   color: var(--basic-white);
   background-color: transparent;
   outline: none;
-  border: none;
+  border: 1px solid transparent;
+  border-radius: 136px;
 }
 
 .footer-form__input:focus {
@@ -951,6 +953,14 @@ img {
 .footer-form__field:focus-within {
   border-color: var(--primary);
   animation: border-pulse 2s ease-in-out infinite;
+}
+
+.footer-form__input.footer-form__input--error {
+  border-color: var(--error);
+}
+
+.footer-form__input.footer-form__input--error::placeholder {
+  color: var(--error);
 }
 
 .footer-form__button {
@@ -976,6 +986,14 @@ img {
   line-height: 18px;
   letter-spacing: 0.01em;
   color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-form__error-message {
+  padding: 8px;
+  font-family: var(--font-primary);
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--error);
 }
 
 .footer__sertificate {
