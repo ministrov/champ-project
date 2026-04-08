@@ -9,13 +9,15 @@ export function initMenu() {
   function openMenu() {
     menu.classList.add('mobile-menu--open');
     overlay.classList.add('page__overlay--open');
+    burger.classList.add('mobile-menu--open');
     burger.setAttribute('aria-label', 'Закрыть меню');
-    document.body.style.overflow = 'hidden'; // Блокируем скролл
+    document.body.style.overflow = 'hidden';
   }
 
   function closeMenu() {
     menu.classList.remove('mobile-menu--open');
     overlay.classList.remove('page__overlay--open');
+    burger.classList.remove('mobile-menu--open');
     burger.setAttribute('aria-label', 'Открыть меню');
     document.body.style.overflow = '';
   }
@@ -28,10 +30,8 @@ export function initMenu() {
     }
   });
 
-    // Закрытие по клику на оверлей
   overlay.addEventListener('click', closeMenu);
 
-  // Закрытие по нажатию Escape
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && menu.classList.contains('mobile-menu--open')) {
       closeMenu();
@@ -39,8 +39,6 @@ export function initMenu() {
   });
 
 
-  // Опционально: изменение иконки в спрайте
-  // Если у вас в спрайте есть отдельные иконки для бургера и крестика
   function updateIcon() {
     const useElement = burger.querySelector('use');
 
@@ -53,6 +51,5 @@ export function initMenu() {
     }
   }
 
-  // Если хотите использовать разные иконки из спрайта, раскомментируйте:
   burger.addEventListener('click', updateIcon);
 }
