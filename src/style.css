@@ -585,7 +585,7 @@ img {
 
   /* Маска создаёт прозрачную обводку */
   --webkit-mask: radial-gradient(circle at 50% 50%, transparent 60%, #000000 62%);
-  mask: radial-gradient(circle at 50% 50%, transparent 60%, #000000 62%);
+  mask: radial-gradient(circle at 50% 50%, transparent 66%, #000000 99%);
 
   /* Сама рамка (будет видна через маску) */
   background-color: transparent;
@@ -601,12 +601,11 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 90%;
-  height: 90%;
+  width: 120px;
+  height: 120px;
   text-decoration: none;
   border: 3px solid var(--primary);
   border-radius: 50%;
-  transform: translate(0, 0);
 }
 
 .avatars__item-link:hover .avatar__plus {
