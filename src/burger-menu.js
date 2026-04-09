@@ -30,7 +30,15 @@ export function initMenu() {
     }
   });
 
-  overlay.addEventListener('click', closeMenu);
+  // overlay.addEventListener('click', closeMenu);
+  overlay.addEventListener('click', (e) => {
+    const useElement = burger.querySelector('use');
+
+    if (e.target === overlay) {
+      closeMenu();
+      useElement.setAttribute('href', '/sprite/sprite.svg#burger');
+    }
+  });
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && menu.classList.contains('mobile-menu--open')) {
