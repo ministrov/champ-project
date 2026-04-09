@@ -1774,24 +1774,30 @@ img {
     padding-left: 21px;
   }
 
+  .avatars__item {
+    width: auto;
+    height: auto;
+  }
+
   .avatars__icon {
     display: flex;
-    width: 93px;
-    height: 88px;
+    width: 94px;
+    height: 96px;
   }
 
   .avatars__item:not(:first-child) {
-    margin-left: -25px;
+    margin-left: -28px;
   }
 
-  .avatars__item.avatars__item--plus {
-    width: 93px;
-    height: 88px;
+  .avatars__item-link {
+    width: 94px;
+    height: 96px;
+    transform: translate(5px, 2px);
   }
 
   .community__avatars-wrapper {
-    margin-bottom: 46px;
-    padding-top: 59px;
+    margin-bottom: 25px;
+    padding-top: 20px;
     padding-left: 0;
   }
 
