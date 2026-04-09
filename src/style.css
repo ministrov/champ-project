@@ -534,10 +534,22 @@ img {
 }
 
 /* Community */
+
+.community__line {
+  width: 100%;
+  height: 1px;
+  background-color: #dee9ed;
+}
+
 .community__avatars-wrapper {
+  max-width: 608px;
+  margin-top: 35px;
   margin-bottom: 35px;
-  padding-top: 35px;
-  border-top: 1px solid #dee9ed;
+  padding-top: 24px;
+  padding-left: 18px;
+  padding-bottom: 16px;
+  background-color: #7ddfdf;
+  border-radius: 32px;
 }
 
 .avatars {
