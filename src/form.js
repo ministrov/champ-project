@@ -29,7 +29,10 @@ export function initFormValidation() {
       nameField.parentElement.append(errorEl);
     } else {
       nameField.classList.remove('footer-form__input--error');
-      nameField.parentElement.querySelector('.footer-form__error-message').remove();
+      const existingError = nameField.parentElement.querySelector('.footer-form__error-message');
+      if (existingError) {
+        existingError.remove();
+      }
     }
 
     if (phone === '') {
@@ -41,7 +44,10 @@ export function initFormValidation() {
       phoneField.parentElement.append(errorEl);
     } else {
       phoneField.classList.remove('footer-form__input--error');
-      phoneField.parentElement.querySelector('.footer-form__error-message').remove();
+      const existingError = phoneField.parentElement.querySelector('.footer-form__error-message');
+      if (existingError) {
+        existingError.remove();
+      }
     }
 
     if (email === '') {
