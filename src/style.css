@@ -972,8 +972,6 @@ img {
 .footer-form__field {
   position: relative;
   width: 378px;
-  height: 55px;
-  background: rgba(255, 255, 255, 0.2);
   border-radius: 100px;
 }
 
@@ -984,7 +982,7 @@ img {
   font-size: 18px;
   line-height: 25px;
   color: var(--basic-white);
-  background-color: transparent;
+  background: rgba(255, 255, 255, 0.2);
   outline: none;
   border: 1px solid transparent;
   border-radius: 136px;

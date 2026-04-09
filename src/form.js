@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 export function initFormValidation() {
   const form = document.querySelector('.footer__form');
-   const nameField = form.querySelector('.footer-form__field input[name="user-name"]');
+  const nameField = form.querySelector('.footer-form__field input[name="user-name"]');
   const phoneField = form.querySelector('.footer-form__field input[name="user-phone"]');
   const emailField = form.querySelector('.footer-form__field input[name="user-email"]');
 
@@ -27,15 +27,21 @@ export function initFormValidation() {
       errorEl.classList.add('footer-form__error-message');
       errorEl.textContent = 'Заполните поле "Имя"';
       nameField.parentElement.append(errorEl);
+    } else {
+      nameField.classList.remove('footer-form__input--error');
+      nameField.parentElement.querySelector('.footer-form__error-message').remove();
     }
 
-     if (phone === '') {
+    if (phone === '') {
       hasError = true;
       phoneField.classList.add('footer-form__input--error');
       const errorEl = document.createElement('div');
       errorEl.classList.add('footer-form__error-message');
       errorEl.textContent = 'Заполните поле "Телефон"\n';
       phoneField.parentElement.append(errorEl);
+    } else {
+      phoneField.classList.remove('footer-form__input--error');
+      phoneField.parentElement.querySelector('.footer-form__error-message').remove();
     }
 
     if (email === '') {
@@ -45,18 +51,26 @@ export function initFormValidation() {
       errorEl.classList.add('footer-form__error-message');
       errorEl.textContent = 'Заполните поле "Почта"\n';
       emailField.parentElement.append(errorEl);
+    } else {
+      emailField.classList.remove('footer-form__input--error');
+      const existingError = emailField.parentElement.querySelector('.footer-form__error-message');
+      if (existingError) {
+        existingError.remove();
+      }
     }
 
-    if (email !== '' && (!email.includes('@') || !email.includes('.'))) {
+    // Improved email validation with regex
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      console.log('Email некорректный');
       hasError = true;
       emailField.classList.add('footer-form__input--error');
       const errorEl = document.createElement('div');
       errorEl.classList.add('footer-form__error-message');
-      errorEl.textContent = 'Введите корректный email (должен содержать @ и точку)\n';
+      errorEl.textContent = 'Введите корректный email (формат: example@domain.com)\n';
       emailField.parentElement.append(errorEl);
     }
 
-    // Если есть ошибки - отменяем отправку
     if (hasError) {
       console.log('Есть ошибки валидации, отправка отменена');
       return;
