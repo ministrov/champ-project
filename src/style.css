@@ -73,6 +73,7 @@
   --error: #a81a1a;
 
   --gradient-primary: linear-gradient(to bottom, #002fa8, #001a68);
+  --gradient-secondary: linear-gradient(to right, #daeef4 19%, #eef4f6 51%, #ffffff 89%);
 
   --container-padding: clamp(15px, 4vw, 40px);
   --container-width: min(1360px, 100vw);
@@ -548,7 +549,7 @@ img {
   padding-top: 24px;
   padding-left: 18px;
   padding-bottom: 16px;
-  background-color: #7ddfdf;
+  background: var(--gradient-secondary);
   border-radius: 32px;
 }
 
