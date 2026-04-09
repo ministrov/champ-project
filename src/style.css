@@ -572,14 +572,6 @@ img {
   transition: transform 0.2s ease;
 }
 
-.avatars__item--plus {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ffffff;
-  border-radius: 50%;
-}
-
 .avatars__item:hover {
   transform: scale(1.05);
 }
@@ -1277,7 +1269,7 @@ img {
 
   .community__avatars-wrapper {
     margin-bottom: 58px;
-    padding-top: 50px;
+    padding-top: 13px;
     padding-left: 10px;
   }
 
@@ -1288,6 +1280,10 @@ img {
   .avatars__icon {
     width: 120px;
     height: 130px;
+  }
+
+  .avatars__item-link {
+    transform: translate(6px, 6px);
   }
 
   .community__text-content {
