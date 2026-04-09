@@ -562,26 +562,67 @@ img {
   list-style: none;
 }
 
+.avatars__item {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  background-color: var(--basic-white);
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+
+.avatars__item:hover {
+  transform: scale(1.05);
+}
+
+/* Прозрачная рамка-обводка через маску */
+.avatars__item::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+
+  /* Маска создаёт прозрачную обводку */
+  --webkit-mask: radial-gradient(circle at 50% 50%, transparent 60%, #000000 62%);
+  mask: radial-gradient(circle at 50% 50%, transparent 60%, #000000 62%);
+
+  /* Сама рамка (будет видна через маску) */
+  background-color: transparent;
+  border: 3px solid transparent;
+  pointer-events: none;
+}
+
 .avatars__item:not(:first-child) {
   margin-left: -24px;
 }
 
-.avatar__plus {
+/* Стили для элемента "+" */
+.avatars__item--plus {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatars__item-link {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
-  color: var(--primary);
+  text-decoration: none;
+  border-radius: 50%;
 }
 
-.avatars__item.avatars__item--plus {
-  width: 120px;
-  height: 120px;
-  border: 2px solid var(--primary);
-  border-radius: 50%;
-  background-color: var(--basic-white);
-  cursor: pointer;
+.avatars__item-link:hover .avatar__plus {
+  transform: rotate(90deg);
+}
+
+.avatar__plus {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.2s ease;
 }
 
 .community__text-content {
