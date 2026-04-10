@@ -263,7 +263,6 @@ img {
 
 .hero__title {
   margin: 0;
-  padding-left: 40px;
   font-family: var(--font-display);
   font-weight: 500;
   font-size: 90px;
@@ -1162,10 +1161,6 @@ img {
     padding: 21px 40px;
   }
 
-  .hero__title {
-    padding-left: 36px;
-  }
-
   .hero__title-up {
     display: inline-block;
     margin-left: -17px;
@@ -1245,7 +1240,7 @@ img {
   }
 
   .about__item.card-item--third {
-    top: 1180px;
+    top: 1182px;
     left: 78%;
   }
 
