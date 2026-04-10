@@ -1275,7 +1275,7 @@ img {
   }
 
   .avatars__item-link {
-    transform: translate(6px, 6px);
+    transform: translate(4px, 1px);
   }
 
   .community__text-content {
@@ -1626,7 +1626,7 @@ img {
   }
 
   .hero__title-down {
-    padding-left: 6%;
+    padding-left: 3%;
   }
 
   .hero__content {
@@ -1783,8 +1783,8 @@ img {
 
   .avatars__item-link {
     width: 94px;
-    height: 96px;
-    transform: translate(5px, 2px);
+    height: 92px;
+    transform: translate(5px, 0);
   }
 
   .community__avatars-wrapper {
@@ -1826,11 +1826,15 @@ img {
 
   .hero__content {
     gap: 27px;
-    margin-left: 10%;
+    margin-left: 9%;
   }
 
   .hero__title {
     padding-left: 27px;
+  }
+
+  .hero__title-up {
+    margin-left: -33px;
   }
 
   .hero__title-down {
