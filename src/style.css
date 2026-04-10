@@ -328,14 +328,6 @@ img {
   right: 391px;
 }
 
-.hero__arrow {
-  color: var(--primary);
-}
-
-.hero__arrow--hand {
-  color: var(--primary);
-}
-
 .hero__arrow-box {
   display: flex;
   flex-direction: column;
