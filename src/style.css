@@ -514,6 +514,8 @@ img {
 }
 
 .card-item__text {
+  overflow: hidden;
+  display: -webkit-box;
   margin: 0;
   margin-top: auto;
   font-family: var(--font-secondary);
@@ -521,6 +523,11 @@ img {
   font-weight: 500;
   line-height: 25px;
   color: rgba(13, 22, 39, 0.7);
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  white-space: normal;
 }
 
 .card-item__image {
@@ -577,18 +584,14 @@ img {
   transform: scale(1.05);
 }
 
-/* Прозрачная рамка-обводка через маску */
 .avatars__item::before {
   content: '';
   position: absolute;
   inset: -3px;
   border-radius: 50%;
-
-  /* Маска создаёт прозрачную обводку */
-  --webkit-mask: radial-gradient(circle at 50% 50%, transparent 60%, #000000 62%);
+  /* stylelint-disable-next-line property-no-vendor-prefix */
+  -webkit-mask: radial-gradient(circle at 50% 50%, transparent 60%, #000000 62%);
   mask: radial-gradient(circle at 50% 50%, transparent 66%, #000000 99%);
-
-  /* Сама рамка (будет видна через маску) */
   background-color: transparent;
   border: 3px solid transparent;
   pointer-events: none;
