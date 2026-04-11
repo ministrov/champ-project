@@ -92,6 +92,7 @@ html {
 }
 
 body {
+  min-width: 360px;
   margin: 0;
   font-family: var(--font-primary);
   font-size: 16px;
@@ -1311,7 +1312,7 @@ img {
 
   .work__wrapper {
     justify-content: initial;
-    gap: 130px;
+    gap: 120px;
   }
 
   .work__wrapper .container {
@@ -1371,8 +1372,8 @@ img {
   }
 
   .footer__link {
-    display: inline-block;
-    margin-top: -11px;
+    display: flex;
+    margin-top: -17px;
   }
 }
 
@@ -2079,6 +2080,6 @@ img {
   }
 
   .footer__copyright {
-    margin-top: 4px;
+    margin-top: 11px;
   }
 }
