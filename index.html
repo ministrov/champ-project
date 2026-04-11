@@ -268,14 +268,12 @@
           <div class="price__tabs-wrapper">
             <ul class="price__tabs tabs" role="tablist">
               <li class="tabs__item" role="presentation">
-                <button class="tabs__button tabs__button--active" type="button" role="tab" aria-selected="true"
-                  aria-controls="panel-payment" id="tab-one-time" aria-label="Разовый платеж">
+                <button class="tabs__button tabs__button--active" type="button" role="tab" aria-label="Разовый платеж">
                   Разовый платеж <span class="tabs__button-sale">-24%</span>
                 </button>
               </li>
               <li class="tabs__item" role="presentation">
-                <button class="tabs__button" type="button" role="tab" aria-selected="false"
-                  aria-controls="panel-payment" id="tab-installment" aria-label="Рассрочка">
+                <button class="tabs__button" type="button" role="tab" aria-label="Рассрочка">
                   Рассрочка
                 </button>
               </li>
@@ -283,14 +281,12 @@
 
             <ul class="price__tabs tabs" role="tablist">
               <li class="tabs__item" role="presentation">
-                <button class="tabs__button tabs__button--active" type="button" role="tab" aria-selected="true"
-                  aria-controls="panel-currency" id="tab-rub" aria-label="Рубли">
+                <button class="tabs__button tabs__button--active" type="button" role="tab" aria-label="Рубли">
                   Рубли
                 </button>
               </li>
               <li class="tabs__item" role="presentation">
-                <button class="tabs__button" type="button" role="tab" aria-selected="false"
-                  aria-controls="panel-currency" id="tab-kzt" aria-label="Тенге">
+                <button class="tabs__button" type="button" role="tab" aria-label="Тенге">
                   Тенге
                 </button>
               </li>
@@ -364,16 +360,18 @@
             <h4 class="plan-card__subtitle">Стоимость</h4>
 
             <div class="plan-card__price" role="group" aria-label="Цены в рублях и тенге">
-              <div class="plan-card__price-field" aria-label="Цена в рублях">
+              <div class="plan-card__price-field">
+                <span class="visually-hidden">Цена в рублях:</span>
                 <span class="plan-card__price-new">83 890 ₽</span>
-                <del class="plan-card__price-old" aria-label="Старая цена">110 388 ₽</del>
+                <del class="plan-card__price-old">110 388 ₽</del>
               </div>
 
-              <span class="plan-card__or" aria-label="или (or)">или</span>
+              <span class="plan-card__or" role="separator" aria-label="или">или</span>
 
-              <div class="plan-card__price-field" aria-label="Цена в тенге">
+              <div class="plan-card__price-field">
+                <span class="visually-hidden">Цена в тенге:</span>
                 <span class="plan-card__price-new">419 000 ₸</span>
-                <del class="plan-card__price-old" aria-label="Старая цена">552 000 ₸</del>
+                <del class="plan-card__price-old">552 000 ₸</del>
               </div>
             </div>
 
@@ -467,8 +465,8 @@
 
   <div class="footer__sertificate sertificate sertificate--mobile">
     <div class="sertificate__text-content">
-      <h3 class="sertificate__title" data-aos="fade">Получи сертификат об успешном завершении курса</h3>
-      <h3 class="sertificate__title-mobile">Получите сертификат после успешного завершения курса</h3>
+      <h2 class="sertificate__title" data-aos="fade">Получи сертификат об успешном завершении курса</h2>
+      <h2 class="sertificate__title-mobile">Получите сертификат после успешного завершения курса</h2>
       <p class="sertificate__text">Обучение ведется на основании лицензии государственного образца</p>
       <a class="sertificate__button button" href="#form">Начать учиться</a>
     </div>
@@ -481,9 +479,9 @@
     <div class="container">
       <div class="footer__sertificate sertificate">
         <div class="sertificate__text-content">
-          <h3 class="sertificate__title" data-aos="fade-up" data-aos-delay="200" data-aos-duration="600">Получи
+          <h2 class="sertificate__title" data-aos="fade-up" data-aos-delay="200" data-aos-duration="600">Получи
             сертификат об успешном
-            завершении курса</h3>
+            завершении курса</h2>
           <p class="sertificate__text">Обучение ведется на основании лицензии государственного образца</p>
           <a class="sertificate__button button" href="#form" data-aos="fade-up" data-aos-delay="400">Начать учиться</a>
         </div>
