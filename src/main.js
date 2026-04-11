@@ -2,7 +2,7 @@ import { initMenu } from './burger-menu';
 import { initFormValidation } from './form';
 import AOS from 'aos';
 
-document.addEventListener('DOMContentLoaded', () => {
+function initializeApp() {
   AOS.init({
     duration: 700,
     easing: 'ease-in-out',
@@ -10,4 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initMenu();
   initFormValidation();
-});
+}
+
+document.addEventListener('DOMContentLoaded', initializeApp);
