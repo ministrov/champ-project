@@ -727,6 +727,11 @@ img {
   color: var(--basic-white);
 }
 
+.tabs__button:focus {
+  outline: var(--primary);
+  box-shadow: 0 0 1px rgba(255, 255, 0, 0.7);
+}
+
 .price__bottom {
   height: 391px;
 }
@@ -1581,6 +1586,11 @@ img {
   .header__burger.mobile-menu--open {
     width: 100%;
     height: 100%;
+  }
+
+  .header__burger:focus {
+    outline: var(--primary);
+    box-shadow: 0 0 1px rgba(255, 255, 0, 0.7);
   }
 
   .header__actions {
