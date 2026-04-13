@@ -25,6 +25,21 @@ const KEYS = {
   ESCAPE: 'Escape'
 };
 
+let isInitialized = false;
+let state = {
+  burger: null,
+  menu: null,
+  beginButton: null,
+  overlay: null,
+  useElement: null,
+  handlers: {
+    beginButtonClick: null,
+    burgerClick: null,
+    overlayClick: null,
+    documentKeydown: null
+  }
+};
+
 /**
  * Создает оверлей для меню
  * @returns {HTMLElement} Созданный элемент оверлея
@@ -34,6 +49,16 @@ function createOverlay() {
   overlay.classList.add(CLASSES.OVERLAY);
   document.body.appendChild(overlay);
   return overlay;
+}
+
+/**
+ * Удаляет оверлей меню
+ * @param {HTMLElement} overlay - Элемент оверлея
+ */
+function removeOverlay(overlay) {
+  if (overlay && overlay.parentNode) {
+    overlay.parentNode.removeChild(overlay);
+  }
 }
 
 /**
@@ -51,190 +76,146 @@ function updateIcon(burger, useElement) {
   useElement.setAttribute('href', iconPath);
 }
 
-/**
- * Открывает мобильное меню
- * @param {HTMLElement} menu - Элемент меню
- * @param {HTMLElement} overlay - Элемент оверлея
- * @param {HTMLElement} burger - Элемент бургер-меню
- */
-function openMenu(menu, overlay, burger) {
-  menu.classList.add(CLASSES.MENU_OPEN);
-  overlay.classList.add(CLASSES.OVERLAY_OPEN);
-  burger.classList.add(CLASSES.MENU_OPEN);
-  burger.setAttribute('aria-label', ARIA_LABELS.CLOSE);
-  document.body.style.overflow = 'hidden';
+function addDocumentKeydownHandler() {
+  if (state.handlers.documentKeydown) {
+    return;
+  }
+
+  const handler = (event) => {
+    handleKeyDown(event);
+  };
+
+  document.addEventListener('keydown', handler);
+  state.handlers.documentKeydown = handler;
 }
 
-/**
- * Закрывает мобильное меню
- * @param {HTMLElement} menu - Элемент меню
- * @param {HTMLElement} overlay - Элемент оверлея
- * @param {HTMLElement} burger - Элемент бургер-меню
- * @param {HTMLElement} useElement - SVG use элемент
- */
-function closeMenu(menu, overlay, burger, useElement) {
-  menu.classList.remove(CLASSES.MENU_OPEN);
-  overlay.classList.remove(CLASSES.OVERLAY_OPEN);
-  burger.classList.remove(CLASSES.MENU_OPEN);
-  burger.setAttribute('aria-label', ARIA_LABELS.OPEN);
+function removeDocumentKeydownHandler() {
+  if (state.handlers.documentKeydown) {
+    document.removeEventListener('keydown', state.handlers.documentKeydown);
+    state.handlers.documentKeydown = null;
+  }
+}
+
+function openMenu() {
+  state.menu.classList.add(CLASSES.MENU_OPEN);
+  state.overlay.classList.add(CLASSES.OVERLAY_OPEN);
+  state.burger.classList.add(CLASSES.MENU_OPEN);
+  state.burger.setAttribute('aria-label', ARIA_LABELS.CLOSE);
+  document.body.style.overflow = 'hidden';
+
+  addDocumentKeydownHandler();
+}
+
+function closeMenu() {
+  state.menu.classList.remove(CLASSES.MENU_OPEN);
+  state.overlay.classList.remove(CLASSES.OVERLAY_OPEN);
+  state.burger.classList.remove(CLASSES.MENU_OPEN);
+  state.burger.setAttribute('aria-label', ARIA_LABELS.OPEN);
   document.body.style.overflow = '';
 
-  if (useElement) {
-    useElement.setAttribute('href', SPRITE_PATHS.BURGER);
+  if (state.useElement) {
+    state.useElement.setAttribute('href', SPRITE_PATHS.BURGER);
   }
+
+  removeDocumentKeydownHandler();
 }
 
-/**
- * Обрабатывает клик по бургер-меню
- * @param {HTMLElement} menu - Элемент меню
- * @param {HTMLElement} overlay - Элемент оверлея
- * @param {HTMLElement} burger - Элемент бургер-меню
- * @param {HTMLElement} useElement - SVG use элемент
- */
-function handleBurgerClick(menu, overlay, burger, useElement) {
-  if (menu.classList.contains(CLASSES.MENU_OPEN)) {
-    closeMenu(menu, overlay, burger, useElement);
+function handleBurgerClick() {
+  if (state.menu.classList.contains(CLASSES.MENU_OPEN)) {
+    closeMenu();
   } else {
-    openMenu(menu, overlay, burger);
+    openMenu();
   }
-  updateIcon(burger, useElement);
+  updateIcon(state.burger, state.useElement);
 }
 
 /**
  * Обрабатывает клик по оверлею
  * @param {Event} event - Событие клика
- * @param {HTMLElement} overlay - Элемент оверлея
- * @param {HTMLElement} menu - Элемент меню
- * @param {HTMLElement} burger - Элемент бургер-меню
- * @param {HTMLElement} useElement - SVG use элемент
  */
-function handleOverlayClick(event, overlay, menu, burger, useElement) {
-  if (event.target === overlay) {
-    closeMenu(menu, overlay, burger, useElement);
+function handleOverlayClick(event) {
+  if (event.target === state.overlay) {
+    closeMenu();
   }
 }
-
 
 /**
  * Обрабатывает нажатие клавиши Escape
  * @param {KeyboardEvent} event - Событие клавиатуры
- * @param {HTMLElement} menu - Элемент меню
- * @param {HTMLElement} overlay - Элемент оверлея
- * @param {HTMLElement} burger - Элемент бургер-меню
- * @param {HTMLElement} useElement - SVG use элемент
  */
-function handleKeyDown(event, menu, overlay, burger, useElement) {
-  if (event.key === KEYS.ESCAPE && menu.classList.contains(CLASSES.MENU_OPEN)) {
-    closeMenu(menu, overlay, burger, useElement);
+function handleKeyDown(event) {
+  if (event.key === KEYS.ESCAPE && state.menu.classList.contains(CLASSES.MENU_OPEN)) {
+    closeMenu();
   }
 }
 
-/**
- * Инициализирует мобильное меню
- */
 export function initMenu() {
+  if (isInitialized) {
+    return;
+  }
+
   const burger = document.querySelector(SELECTORS.BURGER);
   const menu = document.querySelector(SELECTORS.MENU);
   const beginButton = document.querySelector(SELECTORS.BEGIN_BUTTON);
 
-  // Проверка существования элементов
   if (!burger || !menu || !beginButton) {
-    // eslint-disable-next-line no-console
-    console.warn('Не все элементы меню найдены');
     return;
   }
 
-  const overlay = createOverlay();
-  const useElement = burger.querySelector(SELECTORS.USE_ELEMENT);
+  state.burger = burger;
+  state.menu = menu;
+  state.beginButton = beginButton;
+  state.overlay = createOverlay();
+  state.useElement = burger.querySelector(SELECTORS.USE_ELEMENT);
 
-  // Обработчик для кнопки "Начать"
-  beginButton.addEventListener('click', () => {
-    closeMenu(menu, overlay, burger, useElement);
-  });
+  const beginButtonHandler = () => closeMenu();
+  const burgerHandler = () => handleBurgerClick();
+  const overlayHandler = (event) => handleOverlayClick(event);
 
-  // Обработчик для бургер-меню
-  burger.addEventListener('click', () => {
-    handleBurgerClick(menu, overlay, burger, useElement);
-  });
+  state.beginButton.addEventListener('click', beginButtonHandler);
+  state.burger.addEventListener('click', burgerHandler);
+  state.overlay.addEventListener('click', overlayHandler);
 
-  // Обработчик для оверлея
-  overlay.addEventListener('click', (event) => {
-    handleOverlayClick(event, overlay, menu, burger, useElement);
-  });
+  state.handlers.beginButtonClick = beginButtonHandler;
+  state.handlers.burgerClick = burgerHandler;
+  state.handlers.overlayClick = overlayHandler;
 
-  // Обработчик для клавиши Escape
-  document.addEventListener('keydown', (event) => {
-    handleKeyDown(event, menu, overlay, burger, useElement);
-  });
+  isInitialized = true;
 }
 
-// export function initMenu() {
-//   const burger = document.querySelector('.header__burger');
-//   const menu = document.querySelector('.mobile-menu');
-//   const beginButton = document.querySelector('.header__begin');
+export function destroyMenu() {
+  if (!isInitialized) {
+    return;
+  }
 
-//   const overlay = document.createElement('div');
-//   overlay.classList.add('page__overlay');
-//   document.body.appendChild(overlay);
+  if (state.beginButton && state.handlers.beginButtonClick) {
+    state.beginButton.removeEventListener('click', state.handlers.beginButtonClick);
+  }
 
-//   beginButton.addEventListener('click', () => {
-//     const useElement = burger.querySelector('use');
-//     closeMenu();
+  if (state.burger && state.handlers.burgerClick) {
+    state.burger.removeEventListener('click', state.handlers.burgerClick);
+  }
 
-//     useElement.setAttribute('href', '/sprite/sprite.svg#burger');
-//   });
+  if (state.overlay && state.handlers.overlayClick) {
+    state.overlay.removeEventListener('click', state.handlers.overlayClick);
+  }
 
-//   function openMenu() {
-//     menu.classList.add('mobile-menu--open');
-//     overlay.classList.add('page__overlay--open');
-//     burger.classList.add('mobile-menu--open');
-//     burger.setAttribute('aria-label', 'Закрыть меню');
-//     document.body.style.overflow = 'hidden';
-//   }
+  removeDocumentKeydownHandler();
+  removeOverlay(state.overlay);
 
-//   function closeMenu() {
-//     menu.classList.remove('mobile-menu--open');
-//     overlay.classList.remove('page__overlay--open');
-//     burger.classList.remove('mobile-menu--open');
-//     burger.setAttribute('aria-label', 'Открыть меню');
-//     document.body.style.overflow = '';
-//   }
+  state = {
+    burger: null,
+    menu: null,
+    beginButton: null,
+    overlay: null,
+    useElement: null,
+    handlers: {
+      beginButtonClick: null,
+      burgerClick: null,
+      overlayClick: null,
+      documentKeydown: null
+    }
+  };
 
-//   burger.addEventListener('click', () => {
-//     if (menu.classList.contains('mobile-menu--open')) {
-//       closeMenu();
-//     } else {
-//       openMenu();
-//     }
-//   });
-
-//   overlay.addEventListener('click', (e) => {
-//     const useElement = burger.querySelector('use');
-
-//     if (e.target === overlay) {
-//       closeMenu();
-//       useElement.setAttribute('href', '/sprite/sprite.svg#burger');
-//     }
-//   });
-
-//   document.addEventListener('keydown', (e) => {
-//     if (e.key === 'Escape' && menu.classList.contains('mobile-menu--open')) {
-//       closeMenu();
-//     }
-//   });
-
-
-//   function updateIcon() {
-//     const useElement = burger.querySelector('use');
-
-//     if (!useElement) return;
-
-//     if (burger.classList.contains('mobile-menu--open')) {
-//       useElement.setAttribute('href', '/sprite/sprite.svg#close');
-//     } else {
-//       useElement.setAttribute('href', '/sprite/sprite.svg#burger');
-//     }
-//   }
-
-//   burger.addEventListener('click', updateIcon);
-// }
+  isInitialized = false;
+}
