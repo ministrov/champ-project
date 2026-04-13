@@ -25,7 +25,6 @@ const KEYS = {
   ESCAPE: 'Escape'
 };
 
-// Состояние модуля
 let isInitialized = false;
 let state = {
   burger: null,
@@ -163,14 +162,12 @@ export function initMenu() {
     return;
   }
 
-  // Сохраняем состояние
   state.burger = burger;
   state.menu = menu;
   state.beginButton = beginButton;
   state.overlay = createOverlay();
   state.useElement = burger.querySelector(SELECTORS.USE_ELEMENT);
 
-  // Создаем и сохраняем обработчики
   const beginButtonHandler = () => closeMenu();
   const burgerHandler = () => handleBurgerClick();
   const overlayHandler = (event) => handleOverlayClick(event);
@@ -179,7 +176,6 @@ export function initMenu() {
   state.burger.addEventListener('click', burgerHandler);
   state.overlay.addEventListener('click', overlayHandler);
 
-  // Сохраняем ссылки на обработчики для последующего удаления
   state.handlers.beginButtonClick = beginButtonHandler;
   state.handlers.burgerClick = burgerHandler;
   state.handlers.overlayClick = overlayHandler;
@@ -187,15 +183,11 @@ export function initMenu() {
   isInitialized = true;
 }
 
-/**
- * Уничтожает мобильное меню, удаляя все обработчики и элементы
- */
 export function destroyMenu() {
   if (!isInitialized) {
     return;
   }
 
-  // Удаляем обработчики с элементов
   if (state.beginButton && state.handlers.beginButtonClick) {
     state.beginButton.removeEventListener('click', state.handlers.beginButtonClick);
   }
@@ -208,13 +200,9 @@ export function destroyMenu() {
     state.overlay.removeEventListener('click', state.handlers.overlayClick);
   }
 
-  // Удаляем обработчик с document (если меню было открыто)
   removeDocumentKeydownHandler();
-
-  // Удаляем оверлей
   removeOverlay(state.overlay);
 
-  // Сбрасываем состояние
   state = {
     burger: null,
     menu: null,
