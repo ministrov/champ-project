@@ -1,4 +1,4 @@
-import { initMenu } from './burger-menu';
+import { initMenu, destroyMenu } from './burger-menu';
 import { initFormValidation } from './form';
 import AOS from 'aos';
 
@@ -8,7 +8,12 @@ function initializeApp() {
     easing: 'ease-in-out',
   });
 
-  initMenu();
+  function reloadMenu() {
+    destroyMenu();
+    initMenu();
+  }
+
+  reloadMenu();
   initFormValidation();
 }
 

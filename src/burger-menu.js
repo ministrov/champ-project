@@ -184,6 +184,8 @@ export function initMenu() {
 }
 
 export function destroyMenu() {
+  // eslint-disable-next-line no-console
+  console.log('destroyMenu');
   if (!isInitialized) {
     return;
   }
